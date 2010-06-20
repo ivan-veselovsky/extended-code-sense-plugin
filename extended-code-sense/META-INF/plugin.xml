@@ -1,0 +1,24 @@
+<idea-plugin version="2">
+  <name>Extended Code Sense</name>
+  <description>Provides some platform code-sense functionality enhancements.</description>
+  <version>1.0</version>
+  <vendor>Unknown</vendor>
+  <idea-version since-build="8000"/>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+    
+</idea-plugin>
