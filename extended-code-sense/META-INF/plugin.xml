@@ -18,7 +18,7 @@
   </actions>
 
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
+    <typedHandler implementation="edu.jetbrains.codesense.PhpTypedHandlerDelegate"/>
   </extensions>
     
 </idea-plugin>
