@@ -1,0 +1,7 @@
+============
+TODO:
+ - the code sense should apply to PHP language only;
+ - make and use configuration options;
+ - when to popup and when do not: detect when we're expecting a variable name.
+ - show "No sugg" if nothing is found (?)
+ - add the "live templates" (use the contributor ext. point)

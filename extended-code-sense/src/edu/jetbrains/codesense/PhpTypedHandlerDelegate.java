@@ -20,10 +20,6 @@ import com.intellij.psi.javadoc.PsiDocComment;
  */
 public class PhpTypedHandlerDelegate extends TypedHandlerDelegate {
 
-  /*
-    * TODO:
-    * 1) configuration make options;
-     */
   public Result checkAutoPopup(char charTyped, final Project project, final Editor editor, final PsiFile file) {
       System.out.println("checkPopupFor: ["+charTyped+"]");
 
