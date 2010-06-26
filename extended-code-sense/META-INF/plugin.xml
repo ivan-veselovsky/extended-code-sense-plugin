@@ -1,8 +1,22 @@
 <idea-plugin version="2">
+
   <name>Extended Code Sense</name>
+
   <description>Provides some platform code-sense functionality enhancements.</description>
+
   <version>1.0</version>
-  <vendor>Unknown</vendor>
+
+    <change-notes>
+        <![CDATA[
+        <ul>
+            <u><b>Version 1.0 changes</b></u>
+            <li>....</li>
+        </ul>
+        ]]>
+    </change-notes>
+
+  <vendor>Ivan</vendor>
+
   <idea-version since-build="8000"/>
 
   <application-components>
@@ -18,7 +32,12 @@
   </actions>
 
   <extensions defaultExtensionNs="com.intellij">
-    <typedHandler implementation="edu.jetbrains.codesense.PhpTypedHandlerDelegate"/>
+    <typedHandler implementation="edu.jetbrains.codesense.PhpTypedHandlerDelegate" />
+    <completion.contributor implementation="edu.jetbrains.completionWithLiveTemplates.AddLiveTemplatesCompletionContributorEP"
+                            implementationClass="edu.jetbrains.completionWithLiveTemplates.LiveTemplatesCompletionContributor"
+                            language="JAVA"
+                            /> <!-- language="java"  -->
+   <!--  <codeInsight.wordCompletionFilter factoryArgument="" factoryClass="" implementationClass="" language=""/> -->
   </extensions>
     
 </idea-plugin>
