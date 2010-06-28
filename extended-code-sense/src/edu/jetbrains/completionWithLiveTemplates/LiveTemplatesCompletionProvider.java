@@ -5,26 +5,17 @@ import com.intellij.codeInsight.lookup.LookupElement;
 import com.intellij.codeInsight.lookup.LookupElementBuilder;
 import com.intellij.codeInsight.template.CustomLiveTemplate;
 import com.intellij.codeInsight.template.CustomTemplateCallback;
-import com.intellij.codeInsight.template.TemplateManager;
-import com.intellij.codeInsight.template.impl.ListTemplatesHandler;
 import com.intellij.codeInsight.template.impl.TemplateImpl;
 import com.intellij.codeInsight.template.impl.TemplateManagerImpl;
 import com.intellij.codeInsight.template.impl.TemplateSettings;
-import com.intellij.openapi.actionSystem.PlatformDataKeys;
-import com.intellij.openapi.command.CommandProcessor;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.fileEditor.FileEditorManager;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.vfs.VirtualFile;
-import com.intellij.psi.PsiDocumentManager;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
-import com.intellij.psi.util.PsiUtilBase;
-import com.intellij.util.PairProcessor;
 import com.intellij.util.ProcessingContext;
-import com.intellij.util.containers.*;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
@@ -39,124 +30,96 @@ import java.util.*;
 public class LiveTemplatesCompletionProvider extends CompletionProvider<CompletionParameters> {
 
     @Override
-    protected void addCompletions(@NotNull CompletionParameters parameters, ProcessingContext context, @NotNull CompletionResultSet result) {
+    protected void addCompletions(@NotNull CompletionParameters parameters,
+                                  ProcessingContext context,
+                                  @NotNull CompletionResultSet result) {
         final PsiElement element = parameters.getPosition();
         final Project project = element.getProject();
         final PsiFile psiFile = element.getContainingFile();
+        if (psiFile == null) {
+            return; // XXX: ever happens?
+        }
         //VirtualFile virtualFile = psiFile.getVirtualFile();
+        
         // TODO: see if these is a better way to get the editor; Also check if the editor is needed at all there.
-        // !! Use the editor that taken from LookupElement#handleInsert(InsertionContext c)
+        // ! Normally we should use the editor that taken from LookupElement#handleInsert(InsertionContext c)
+        // Actually there are 2 obstacles:
+        // 1) CustomTemplateCallback
+        // 2) editor.getDocument().getCharsSequence()
         final Editor editor = FileEditorManager.getInstance(project).getSelectedTextEditor();
         if (editor == null) {
             // fallback:
             return;
         }
-        //TemplateManager templateManager0 = TemplateManager.getInstance(project);
-        //TemplateManagerImpl templateManager = (TemplateManagerImpl) TemplateManagerImpl.getInstance(project);
-
-        Map<Object, String> m = startTemplate(project, editor);
-        if (m == null || m.size() < 1) {
-            return;
-        }
-        Object firstKey = m.keySet().iterator().next();
-        if (firstKey instanceof CustomLiveTemplate) {
-            addLiveTemplateToCompletionList((CustomLiveTemplate)firstKey, m.get(firstKey), result);
-        } else if (firstKey instanceof TemplateImpl) {
-            Map<TemplateImpl, String> map = (Map)m;
-            for (Map.Entry<TemplateImpl,String> e: map.entrySet()) {
-                addLiveTemplateToCompletionList(e.getKey(), e.getValue(), result);
-            }
-        }
-    }
-
-    private static void addLiveTemplateToCompletionList(TemplateImpl templateImpl, String argument, CompletionResultSet result) {
-        String key = templateImpl.getKey();
-        //String id = templateImpl.getId();
-        String description = templateImpl.getDescription();
-        //String string = templateImpl.getString(); // template text
-        LookupElementBuilder lookupElementBuilder = LookupElementBuilder.create(description, key);
-        //lookupElementBuilder.setTailText(description, false);
-        lookupElementBuilder = lookupElementBuilder.setInsertHandler(new InsertHandler() {
-            public void handleInsert(InsertionContext context, LookupElement item) {
-                // TODO: correctly apply the live template here.
-                System.out.println("inserted lookup element: ["+item+"], context = ["+context+"]");
-            }
-        });
-        // TODO: add icon for live templates. Maybe borrow from eclipse.
-        lookupElementBuilder = lookupElementBuilder.setPresentableText(key);
-        lookupElementBuilder = lookupElementBuilder.setTypeText(description);
-        //lookupElementBuilder = lookupElementBuilder.setTailText(" - ");
-        lookupElementBuilder.setPrefixMatcher(new PrefixMatcher("matcher") {
-            @Override
-            public boolean prefixMatches(@NotNull LookupElement element) {
-                return true; //super.prefixMatches(element);    //To change body of overridden methods use File | Settings | File Templates.
-            }
-
-            @Override
-            public boolean prefixMatches(@NotNull String name) {
-                return true;  //To change body of implemented methods use File | Settings | File Templates.
-            }
-
-            @NotNull
-            @Override
-            public PrefixMatcher cloneWithPrefix(@NotNull String prefix) {
-                return this;  //To change body of implemented methods use File | Settings | File Templates.
-            }
-        });
-        result.addElement(lookupElementBuilder);
-    }
-
-    private static void addLiveTemplateToCompletionList(CustomLiveTemplate customLiveTemplate, String key, CompletionResultSet result) {
-        String title = customLiveTemplate.getTitle();
-        LookupElementBuilder lookupElement = LookupElementBuilder.create(title, key);
-        lookupElement.setTailText(title, false);
-        lookupElement.setPrefixMatcher(new PrefixMatcher("") {
-            @Override
-            public boolean prefixMatches(@NotNull LookupElement element) {
-                return true; //super.prefixMatches(element);    //To change body of overridden methods use File | Settings | File Templates.
-            }
-
-            @Override
-            public boolean prefixMatches(@NotNull String name) {
-                return true;  //To change body of implemented methods use File | Settings | File Templates.
-            }
-
-            @NotNull
-            @Override
-            public PrefixMatcher cloneWithPrefix(@NotNull String prefix) {
-                return this;  //To change body of implemented methods use File | Settings | File Templates.
-            }
-        });
-        result.addElement(lookupElement);
-    }
-
-    public Map<Object,String> startTemplate(Project project, final Editor editor) {
-      PsiFile file = PsiUtilBase.getPsiFileInEditor(editor, project);
-      if (file == null) return null;
-      TemplateSettings templateSettings = TemplateSettings.getInstance();
-
-      Map<TemplateImpl, String> template2argument = findMatchingTemplates(file, editor, templateSettings);
-
-      for (final CustomLiveTemplate customLiveTemplate : CustomLiveTemplate.EP_NAME.getExtensions()) {
-        //if (shortcutChar == customLiveTemplate.getShortcut()) {
-          int caretOffset = editor.getCaretModel().getOffset();
-          if (customLiveTemplate.isApplicable(file, caretOffset)) {
-            final CustomTemplateCallback callback = new CustomTemplateCallback(editor, file);
-            String key = customLiveTemplate.computeTemplateKey(callback);
-            if (key != null) {
-              int offsetBeforeKey = caretOffset - key.length();
-              CharSequence text = editor.getDocument().getCharsSequence();
-              if (template2argument == null || !containsTemplateStartingBefore(template2argument, offsetBeforeKey, caretOffset, text)) {
-                //customLiveTemplate.expand(key, callback);
-                //callback.startAllExpandedTemplates();
-                return Collections.<Object, String>singletonMap(customLiveTemplate, key) ; //true;
+        final int offset = parameters.getOffset();
+        final TemplateSettings templateSettings = TemplateSettings.getInstance();
+        final Map<TemplateImpl, String> template2argument = findMatchingTemplates(psiFile, editor, templateSettings);
+        for (final CustomLiveTemplate customLiveTemplate : CustomLiveTemplate.EP_NAME.getExtensions()) {
+            //int caretOffset = editor.getCaretModel().getOffset();
+            if (customLiveTemplate.isApplicable(psiFile, offset)) {
+              final CustomTemplateCallback callback = new CustomTemplateCallback(editor, psiFile);
+              final String key = customLiveTemplate.computeTemplateKey(callback);
+              if (key != null) {
+                final int offsetBeforeKey = offset - key.length();
+                CharSequence text = editor.getDocument().getCharsSequence();
+                if (template2argument == null || !containsTemplateStartingBefore(template2argument, offsetBeforeKey, offset, text)) {
+                    final String description = customLiveTemplate.getTitle();
+                    LookupElementBuilder lookupElementBuilder = LookupElementBuilder.create(description, key);
+                    lookupElementBuilder = lookupElementBuilder.setInsertHandler(new InsertHandler<LookupElement>() {
+                        public void handleInsert(InsertionContext context, LookupElement item) {
+                            Editor editor2 = context.getEditor();
+                            if (!FileDocumentManager.getInstance().requestWriting(editor2.getDocument(), project)) {
+                              return;
+                            }
+                            customLiveTemplate.expand(key, callback);
+                            callback.startAllExpandedTemplates();
+                        }
+                    });
+                    // TODO: add another icon for Custom Live templates. 
+                    //lookupElementBuilder = lookupElementBuilder.setIcon(....);
+                    lookupElementBuilder = lookupElementBuilder.setPresentableText(key);
+                    lookupElementBuilder = lookupElementBuilder.setTypeText(description);
+                    result.addElement(lookupElementBuilder);
+                    return;
+                }
               }
             }
-          }
-        //}
-      }
-      //return startNonCustomTemplates(template2argument, editor, processor);
-        return (Map)template2argument;
+        }
+
+        if (template2argument != null) {
+            for (Map.Entry<TemplateImpl,String> e: template2argument.entrySet()) {
+                addLiveTemplateToCompletionList(project, e.getKey(), e.getValue(), result);
+            }
+        }
+    }
+
+    private static void addLiveTemplateToCompletionList(final Project project,
+                                                        final TemplateImpl templateImpl,
+                                                        final String argument,
+                                                        CompletionResultSet result) {
+        String key = templateImpl.getKey();
+        String description = templateImpl.getDescription();
+        LookupElementBuilder lookupElementBuilder = LookupElementBuilder.create(description, key);
+        lookupElementBuilder = lookupElementBuilder.setInsertHandler(new InsertHandler<LookupElement>() {
+            public void handleInsert(InsertionContext context, LookupElement item) {
+                //System.out.println("inserted lookup element: ["+item+"], context = ["+context+"]");
+                final Editor editor2 = context.getEditor();
+                final int caretOffset = editor2.getCaretModel().getOffset();
+                final Document document = editor2.getDocument();
+                final CharSequence text = document.getCharsSequence();
+                if (!FileDocumentManager.getInstance().requestWriting(editor2.getDocument(), project)) {
+                  return;
+                }
+                TemplateManagerImpl templateManager = (TemplateManagerImpl)TemplateManagerImpl.getInstance(project);
+                int templateStart = getTemplateStart(templateImpl, argument, caretOffset, text);
+                templateManager.startTemplateWithPrefix(editor2, templateImpl, templateStart, null, argument);
+            }
+        });
+        // TODO: add icon for live templates. 
+        //lookupElementBuilder = lookupElementBuilder.setIcon(....);
+        lookupElementBuilder = lookupElementBuilder.setPresentableText(key);
+        lookupElementBuilder = lookupElementBuilder.setTypeText(description);
+        result.addElement(lookupElementBuilder);
     }
 
     private static boolean containsTemplateStartingBefore(Map<TemplateImpl, String> template2argument,
@@ -195,12 +158,11 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
       return templateStart;
     }
 
-    private Map<TemplateImpl, String> findMatchingTemplates(final PsiFile file,
+    private static Map<TemplateImpl, String> findMatchingTemplates(final PsiFile file,
                                                             Editor editor,
-                                                            //Character shortcutChar,
                                                             TemplateSettings templateSettings) {
       final Document document = editor.getDocument();
-      CharSequence text = document.getCharsSequence();
+      final CharSequence text = document.getCharsSequence();
       final int caretOffset = editor.getCaretModel().getOffset();
 
       List<TemplateImpl> candidatesWithoutArgument = findMatchingTemplates(text, caretOffset, templateSettings, false);
@@ -227,23 +189,23 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
 //        }
 //      }, "", null);
 
-      candidatesWithoutArgument = filterApplicableCandidates(file, caretOffset, candidatesWithoutArgument);
-      candidatesWithArgument = filterApplicableCandidates(file, argumentOffset, candidatesWithArgument);
+      candidatesWithoutArgument = TemplateManagerImpl.filterApplicableCandidates(file, caretOffset, candidatesWithoutArgument);
+      candidatesWithArgument = TemplateManagerImpl.filterApplicableCandidates(file, argumentOffset, candidatesWithArgument);
       Map<TemplateImpl, String> candidate2Argument = new com.intellij.util.containers.HashMap<TemplateImpl, String>();
       addToMap(candidate2Argument, candidatesWithoutArgument, null);
       addToMap(candidate2Argument, candidatesWithArgument, argument);
       return candidate2Argument;
     }
 
-    public static List<TemplateImpl> filterApplicableCandidates(PsiFile file, int caretOffset, List<TemplateImpl> candidates) {
-      List<TemplateImpl> result = new ArrayList<TemplateImpl>();
-      for (TemplateImpl candidate : candidates) {
-        if (TemplateManagerImpl.isApplicable(file, caretOffset - candidate.getKey().length(), candidate)) {
-          result.add(candidate);
-        }
-      }
-      return result;
-    }
+//    public static List<TemplateImpl> filterApplicableCandidates(PsiFile file, int caretOffset, List<TemplateImpl> candidates) {
+//      List<TemplateImpl> result = new ArrayList<TemplateImpl>();
+//      for (TemplateImpl candidate : candidates) {
+//        if (TemplateManagerImpl.isApplicable(file, caretOffset - candidate.getKey().length(), candidate)) {
+//          result.add(candidate);
+//        }
+//      }
+//      return result;
+//    }
 
     private static <T, U> void addToMap(@NotNull Map<T, U> map, @NotNull Collection<? extends T> keys, U value) {
       for (T key : keys) {
@@ -284,7 +246,6 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
             continue;
           }
         }
-
         candidates = collectMatchingCandidates(settings, key, hasArgument);
         if (!candidates.isEmpty()) break;
       }
@@ -312,31 +273,5 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
       }
       return candidates;
     }
-
-//    public boolean startNonCustomTemplates(Map<TemplateImpl, String> template2argument,
-//                                            Editor editor,
-//                                            PairProcessor<String, String> processor) {
-//      final int caretOffset = editor.getCaretModel().getOffset();
-//      final Document document = editor.getDocument();
-//      CharSequence text = document.getCharsSequence();
-//
-//      if (template2argument == null || template2argument.size() == 0) {
-//        return false;
-//      }
-//      if (!FileDocumentManager.getInstance().requestWriting(editor.getDocument(), myProject)) {
-//        return false;
-//      }
-//
-//      if (template2argument.size() == 1) {
-//        TemplateImpl template = template2argument.keySet().iterator().next();
-//        String argument = template2argument.get(template);
-//        int templateStart = getTemplateStart(template, argument, caretOffset, text);
-//        startTemplateWithPrefix(editor, template, templateStart, processor, argument);
-//      }
-//      else {
-//        ListTemplatesHandler.showTemplatesLookup(myProject, editor, template2argument);
-//      }
-//      return true;
-//    }
 
 }
