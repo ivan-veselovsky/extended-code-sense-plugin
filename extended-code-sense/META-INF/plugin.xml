@@ -6,16 +6,16 @@
 
   <version>1.0</version>
 
-    <change-notes>
+  <change-notes>
         <![CDATA[
         <ul>
             <u><b>Version 1.0 changes</b></u>
             <li>....</li>
         </ul>
         ]]>
-    </change-notes>
+  </change-notes>
 
-  <vendor>Ivan</vendor>
+  <vendor>Ivan V.</vendor>
 
   <idea-version since-build="8000"/>
 
@@ -35,9 +35,8 @@
     <typedHandler implementation="edu.jetbrains.codesense.PhpTypedHandlerDelegate" />
     <completion.contributor implementation="edu.jetbrains.completionWithLiveTemplates.AddLiveTemplatesCompletionContributorEP"
                             implementationClass="edu.jetbrains.completionWithLiveTemplates.LiveTemplatesCompletionContributor"
-                            language="JAVA"
-                            /> <!-- language="java"  -->
-   <!--  <codeInsight.wordCompletionFilter factoryArgument="" factoryClass="" implementationClass="" language=""/> -->
+                            language="PHP"
+                            /> <!-- language="JAVA"  -->
   </extensions>
     
 </idea-plugin>
