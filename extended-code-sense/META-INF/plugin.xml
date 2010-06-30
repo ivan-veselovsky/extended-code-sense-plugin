@@ -1,15 +1,17 @@
-<idea-plugin version="2">
+<idea-plugin version="2" url="http://veselovsky.net/plugin/">
 
   <name>Extended Code Sense</name>
 
+  <id>extended-code-sense</id>   
+
   <description>Provides some platform code-sense functionality enhancements.</description>
 
-  <version>1.0</version>
+  <version>0.2</version>
 
   <change-notes>
         <![CDATA[
         <ul>
-            <u><b>Version 1.0 changes</b></u>
+            <u><b>Version 0.2 changes</b></u>
             <li>....</li>
         </ul>
         ]]>
@@ -18,6 +20,8 @@
   <vendor>Ivan V.</vendor>
 
   <idea-version since-build="8000"/>
+
+  <depends>com.intellij.modules.platform</depends>
 
   <application-components>
     <!-- Add your application components here -->
@@ -38,5 +42,5 @@
                             language="PHP"
                             /> <!-- language="JAVA"  -->
   </extensions>
-    
+
 </idea-plugin>

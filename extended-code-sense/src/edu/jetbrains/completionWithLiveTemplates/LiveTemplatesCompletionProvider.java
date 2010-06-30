@@ -75,7 +75,7 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
                             callback.startAllExpandedTemplates();
                         }
                     });
-                    // TODO: add another icon for Custom Live templates. 
+                    // TODO: add an icon for Custom Live templates. 
                     //lookupElementBuilder = lookupElementBuilder.setIcon(....);
                     lookupElementBuilder = lookupElementBuilder.setPresentableText(key);
                     lookupElementBuilder = lookupElementBuilder.setTypeText(description);
@@ -247,13 +247,28 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
           }
         }
         candidates = collectMatchingCandidates(settings, key, hasArgument);
-        if (!candidates.isEmpty()) break;
+        if (!candidates.isEmpty()) {
+            break;
+        }
       }
       return candidates;
     }
 
+    private static Collection<TemplateImpl> getSemiMatchingTemplates(TemplateSettings settings, String startingWith) {
+        //final Collection<TemplateImpl> templates = settings.getTemplates(key);
+        final Collection<TemplateImpl> coll = new ArrayList<TemplateImpl>();
+        TemplateImpl[] templates = settings.getTemplates();
+        for (TemplateImpl impl: templates) {
+            if (impl.getKey().startsWith(startingWith)) {
+                 coll.add(impl);
+            }
+        }
+        return coll;       
+    }
+
     private static List<TemplateImpl> collectMatchingCandidates(TemplateSettings settings, String key, boolean hasArgument) {
-      final Collection<TemplateImpl> templates = settings.getTemplates(key);
+        //final Collection<TemplateImpl> templates = settings.getTemplates(key);
+        final Collection<TemplateImpl> templates = getSemiMatchingTemplates(settings, key);
       List<TemplateImpl> candidates = new ArrayList<TemplateImpl>();
       for (TemplateImpl template : templates) {
         if (template.isDeactivated()) {
