@@ -15,12 +15,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="9616052c-29ee-47a3-b9c6-5a483e56f36e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jetbrains/codesense/PhpTypedHandlerDelegate.java" afterPath="$PROJECT_DIR$/src/edu/jetbrains/codesense/PhpTypedHandlerDelegate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jetbrains/codesense/PhpTypedHandlerDelegate.java" afterPath="$PROJECT_DIR$/src/edu/jetbrains/codesense/PhpTypedHandlerDelegate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="DELETED" beforePath="G:\home\ivan\git\repka\extended-code-sense\extended-code-sense.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO.txt" afterPath="$PROJECT_DIR$/TODO.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionProvider.java" afterPath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extended-code-sense.jar" afterPath="$PROJECT_DIR$/extended-code-sense.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/jetbrains/options/PluginOptionsConfigurable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/usage.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/AddLiveTemplatesCompletionContributorEP.java" afterPath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/AddLiveTemplatesCompletionContributorEP.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/jetbrains/util/Debug.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java" afterPath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java" />
     </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
@@ -39,389 +41,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <method_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/platform-api/src/com/intellij/injected/editor/DocumentWindow.java" line="47" class="com.intellij.injected.editor.DocumentWindow" package="com.intellij.injected.editor">
-        <option name="WATCH_ENTRY" value="true" />
-        <option name="WATCH_EXIT" value="true" />
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </method_breakpoints>
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java" line="27" class="edu.jetbrains.completionWithLiveTemplates.LiveTemplatesCompletionContributor" package="edu.jetbrains.completionWithLiveTemplates">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/CustomTemplateCallback.java" line="108" class="com.intellij.codeInsight.template.CustomTemplateCallback" package="com.intellij.codeInsight.template">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/InvokeTemplateAction.java" line="73" class="com.intellij.codeInsight.template.impl.InvokeTemplateAction" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/InvokeTemplateAction.java" line="61" class="com.intellij.codeInsight.template.impl.InvokeTemplateAction" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/InvokeTemplateAction.java" line="47" class="com.intellij.codeInsight.template.impl.InvokeTemplateAction" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/java/java-impl/src/com/intellij/codeInsight/template/impl/JavaTemplateLookupSelectionHandler.java" line="28" class="com.intellij.codeInsight.template.impl.JavaTemplateLookupSelectionHandler" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/actions/ListTemplatesAction.java" line="25" class="com.intellij.codeInsight.template.impl.actions.ListTemplatesAction" package="com.intellij.codeInsight.template.impl.actions">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/ListTemplatesHandler.java" line="41" class="com.intellij.codeInsight.template.impl.ListTemplatesHandler" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/actions/SurroundWithTemplateAction.java" line="27" class="com.intellij.codeInsight.template.impl.actions.SurroundWithTemplateAction" package="com.intellij.codeInsight.template.impl.actions">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/SurroundWithTemplateHandler.java" line="40" class="com.intellij.codeInsight.template.impl.SurroundWithTemplateHandler" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/InvokeTemplateAction.java" line="40" class="com.intellij.codeInsight.template.impl.InvokeTemplateAction" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/WrapWithCustomTemplateAction.java" line="55" class="com.intellij.codeInsight.template.impl.WrapWithCustomTemplateAction" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/CustomTemplateCallback.java" line="65" class="com.intellij.codeInsight.template.CustomTemplateCallback" package="com.intellij.codeInsight.template">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/CustomTemplateCallback.java" line="69" class="com.intellij.codeInsight.template.CustomTemplateCallback" package="com.intellij.codeInsight.template">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/CustomTemplateCallback.java" line="80" class="com.intellij.codeInsight.template.CustomTemplateCallback" package="com.intellij.codeInsight.template">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/CustomTemplateCallback.java" line="86" class="com.intellij.codeInsight.template.CustomTemplateCallback" package="com.intellij.codeInsight.template">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/CustomTemplateCallback.java" line="92" class="com.intellij.codeInsight.template.CustomTemplateCallback" package="com.intellij.codeInsight.template">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/CustomTemplateCallback.java" line="117" class="com.intellij.codeInsight.template.CustomTemplateCallback" package="com.intellij.codeInsight.template">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/CustomTemplateCallback.java" line="158" class="com.intellij.codeInsight.template.CustomTemplateCallback" package="com.intellij.codeInsight.template">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/CustomTemplateCallback.java" line="173" class="com.intellij.codeInsight.template.CustomTemplateCallback" package="com.intellij.codeInsight.template">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/CustomTemplateCallback.java" line="179" class="com.intellij.codeInsight.template.CustomTemplateCallback" package="com.intellij.codeInsight.template">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/CustomTemplateCallback.java" line="191" class="com.intellij.codeInsight.template.CustomTemplateCallback" package="com.intellij.codeInsight.template">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/lookup/LookupElement.java" line="60" class="com.intellij.codeInsight.lookup.LookupElement" package="com.intellij.codeInsight.lookup">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateManagerImpl.java" line="151" class="com.intellij.codeInsight.template.impl.TemplateManagerImpl" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateManagerImpl.java" line="141" class="com.intellij.codeInsight.template.impl.TemplateManagerImpl" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateManagerImpl.java" line="134" class="com.intellij.codeInsight.template.impl.TemplateManagerImpl" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateManagerImpl.java" line="130" class="com.intellij.codeInsight.template.impl.TemplateManagerImpl" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateManagerImpl.java" line="190" class="com.intellij.codeInsight.template.impl.TemplateManagerImpl" package="com.intellij.codeInsight.template.impl">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateManagerImpl.java" line="198" class="com.intellij.codeInsight.template.impl.TemplateManagerImpl" package="com.intellij.codeInsight.template.impl">
+      <breakpoint url="file://$PROJECT_DIR$/src/edu/jetbrains/codesense/PhpTypedHandlerDelegate.java" line="211" class="edu.jetbrains.codesense.PhpTypedHandlerDelegate" package="edu.jetbrains.codesense">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -476,10 +97,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="plugin.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PhpTypedHandlerDelegate.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/codesense/PhpTypedHandlerDelegate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="62" selection-start="4146" selection-end="4146" vertical-scroll-proportion="0.0">
+            <state line="165" column="0" selection-start="6211" selection-end="6211" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -487,82 +117,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PsiMember.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiMember.java">
+      <file leaf-file-name="Debug.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/util/Debug.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="17" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
+            <state line="15" column="44" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PsiIdentifier.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiIdentifier.java">
+      <file leaf-file-name="PsiErrorElementImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/psi/impl/source/tree/PsiErrorElementImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="43" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0">
+            <state line="24" column="82" selection-start="898" selection-end="898" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PsiJavaToken.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiJavaToken.java">
+      <file leaf-file-name="AddLiveTemplatesCompletionContributorEP.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/AddLiveTemplatesCompletionContributorEP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="17" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0">
+            <state line="18" column="31" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PsiLocalVariable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiLocalVariable.java">
+      <file leaf-file-name="LiveTemplatesCompletionContributor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="48" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0">
+            <state line="23" column="74" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PsiVariable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiVariable.java">
+      <file leaf-file-name="LiveTemplatesCompletionProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="27" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
+            <state line="29" column="57" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IElementType.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../maia/community/platform/platform-api/src/com/intellij/psi/tree/IElementType.java">
+      <file leaf-file-name="CompletionProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/CompletionProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="13" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.0">
+            <state line="24" column="22" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
+      <file leaf-file-name="LanguageExtensionPoint.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../maia/community/platform/platform-api/src/com/intellij/lang/LanguageExtensionPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1185" selection-end="1185" vertical-scroll-proportion="1.4341564">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PsiIfStatement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiIfStatement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="45" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PsiStatement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiStatement.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
+            <state line="52" column="16" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -583,11 +195,15 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/AddLiveTemplatesCompletionContributorEP.java" />
-        <option value="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java" />
         <option value="$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateManagerImpl.java" />
         <option value="$PROJECT_DIR$/TODO.txt" />
         <option value="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionProvider.java" />
+        <option value="$PROJECT_DIR$/../../maia/community/xml/impl/src/com/intellij/codeInsight/editorActions/XmlAutoPopupHandler.java" />
+        <option value="$PROJECT_DIR$/src/edu/jetbrains/edu/jetbrains/util/Debug.java" />
+        <option value="$PROJECT_DIR$/src/edu/jetbrains/options/PluginOptionsConfigurable.java" />
+        <option value="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/AddLiveTemplatesCompletionContributorEP.java" />
+        <option value="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java" />
+        <option value="$PROJECT_DIR$/src/edu/jetbrains/util/Debug.java" />
         <option value="$PROJECT_DIR$/src/edu/jetbrains/codesense/PhpTypedHandlerDelegate.java" />
         <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
       </list>
@@ -684,6 +300,32 @@
               <option name="myItemId" value="jetbrains" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extended-code-sense" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extended-code-sense" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jetbrains" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="options" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -745,30 +387,30 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
       <pane id="PackagesPane" />
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.24083333" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="editing.templates" />
+    <property name="options.lastSelected" value="project.propDebugger" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Plugin.DebugPlugin">
+  <component name="RunManager" selected="Plugin.Plugin2">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="extended-code-sense" />
       <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=250m -ea" />
@@ -793,6 +435,7 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" />
       <extension name="snapshooter" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -891,8 +534,22 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="1">
+    <configuration default="false" name="Plugin2" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="extended-code-sense" />
+      <option name="VM_PARAMETERS" value=" -Xms128m -Xmx512m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <log_file path="$USER_HOME_GRIFFON$/.IdeaIC10/system/plugins-sandbox/system/log/idea.log" checked="true" skipped="true" show_all="false" alias="IDEA LOG" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="64451" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Plugin.DebugPlugin" />
+      <item index="1" class="java.lang.String" itemvalue="Plugin.Plugin2" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -961,20 +618,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18244803" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34064665" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37413394" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34411085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32678983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32794458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32331288" sideWeight="0.21247113" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3226994" sideWeight="0.20092379" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32331288" sideWeight="0.39722863" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3226994" sideWeight="0.4561201" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -983,6 +640,7 @@
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -1012,6 +670,40 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
+  <component name="VssConfiguration">
+    <option name="CLIENT_PATH" value="" />
+    <option name="SRCSAFEINI_PATH" value="" />
+    <option name="USER_NAME" value="" />
+    <option name="PWD" value="" />
+    <CheckoutOptions>
+      <option name="COMMENT" value="" />
+      <option name="DO_NOT_GET_LATEST_VERSION" value="false" />
+      <option name="REPLACE_WRITABLE" value="false" />
+      <option name="RECURSIVE" value="false" />
+    </CheckoutOptions>
+    <CheckinOptions>
+      <option name="COMMENT" value="" />
+      <option name="KEEP_CHECKED_OUT" value="false" />
+      <option name="RECURSIVE" value="false" />
+    </CheckinOptions>
+    <AddOptions>
+      <option name="STORE_ONLY_LATEST_VERSION" value="false" />
+      <option name="CHECK_OUT_IMMEDIATELY" value="false" />
+    </AddOptions>
+    <UndocheckoutOptions>
+      <option name="MAKE_WRITABLE" value="false" />
+      <option name="REPLACE_LOCAL_COPY" value="2" />
+      <option name="RECURSIVE" value="false" />
+    </UndocheckoutOptions>
+    <GetOptions>
+      <option name="REPLACE_WRITABLE" value="0" />
+      <option name="MAKE_WRITABLE" value="false" />
+      <option name="ANSWER_NEGATIVELY" value="false" />
+      <option name="ANSWER_POSITIVELY" value="false" />
+      <option name="RECURSIVE" value="false" />
+      <option name="VERSION" />
+    </GetOptions>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
@@ -1020,116 +712,118 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/psi/PsiNameIdentifierOwner.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/options/PluginOptionsConfigurable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="52" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/psi/PsiNamedElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="25" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiBinaryExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="17" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiArrayInitializerExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="17" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiAnnotationMemberValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiArrayInitializerMemberValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="64" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiIfStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="45" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiJavaToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiIdentifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="43" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiLocalVariable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="48" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiVariable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="27" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/java/openapi/src/com/intellij/psi/PsiMember.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="17" selection-start="772" selection-end="772" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/codesense/PhpTypedHandlerDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="62" selection-start="4146" selection-end="4146" vertical-scroll-proportion="0.0">
+        <state line="23" column="62" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/platform-api/src/com/intellij/psi/tree/IElementType.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.6.0_20/jre/lib/rt.jar!/sun/reflect/NativeConstructorAccessorImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="13" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.0">
+        <state line="16" column="43" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/extensions/src/com/intellij/openapi/extensions/impl/ExtensionComponentAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="0" selection-start="4022" selection-end="4022" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/extensions/src/com/intellij/openapi/extensions/impl/ExtensionPointImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="278" column="0" selection-start="9490" selection-end="9490" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/platform-api/src/com/intellij/openapi/util/KeyedExtensionCollector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="0" selection-start="4488" selection-end="4488" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/psi/impl/source/tree/LeafPsiElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="0" selection-start="2386" selection-end="2386" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/platform-api/src/com/intellij/lang/LanguageExtensionPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="16" selection-start="1706" selection-end="1706" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="57" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/CompletionProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="22" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/AddLiveTemplatesCompletionContributorEP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="31" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="74" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/codesense/PhpTypedHandlerDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="165" column="0" selection-start="6211" selection-end="6211" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/psi/PsiErrorElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="17" selection-start="744" selection-end="744" vertical-scroll-proportion="0.17770036">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/psi/impl/source/tree/PsiErrorElementImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="82" selection-start="898" selection-end="898" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/util/Debug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="44" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1185" selection-end="1185" vertical-scroll-proportion="1.4341564">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

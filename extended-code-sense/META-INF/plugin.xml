@@ -1,4 +1,4 @@
-<idea-plugin version="2" url="http://veselovsky.net/plugin/">
+<idea-plugin version="2" url="http://github.com/ivan-veselovsky/repka/raw/master/extended-code-sense/">
 
   <name>Extended Code Sense</name>
 
@@ -6,13 +6,14 @@
 
   <description>Provides some platform code-sense functionality enhancements.</description>
 
-  <version>0.2</version>
+  <version>0.3</version>
 
   <change-notes>
         <![CDATA[
         <ul>
-            <u><b>Version 0.2 changes</b></u>
-            <li>....</li>
+            <u><b>Version 0.3 changes</b></u>
+            <li>Auto pop up now works after "[" (array length expression).</li>
+            <li>Auto popup feature extended for all languages, not only Php.</li>
         </ul>
         ]]>
   </change-notes>
@@ -39,8 +40,8 @@
     <typedHandler implementation="edu.jetbrains.codesense.PhpTypedHandlerDelegate" />
     <completion.contributor implementation="edu.jetbrains.completionWithLiveTemplates.AddLiveTemplatesCompletionContributorEP"
                             implementationClass="edu.jetbrains.completionWithLiveTemplates.LiveTemplatesCompletionContributor"
-                            language="PHP"
-                            /> <!-- language="JAVA"  -->
+                            language="any"
+                            />
   </extensions>
 
 </idea-plugin>

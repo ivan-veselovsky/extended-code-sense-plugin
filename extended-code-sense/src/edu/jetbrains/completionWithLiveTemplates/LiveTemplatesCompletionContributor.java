@@ -21,7 +21,8 @@ import org.jetbrains.annotations.Nullable;
  */
 public class LiveTemplatesCompletionContributor extends CompletionContributor {
 
-    private LiveTemplatesCompletionProvider provider = new LiveTemplatesCompletionProvider();
+    private final LiveTemplatesCompletionProvider provider = new LiveTemplatesCompletionProvider();
+    
     public LiveTemplatesCompletionContributor() {
          //CompletionType completionType =
         // TODO: remake for PHP:

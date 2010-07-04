@@ -16,11 +16,7 @@ public class AddLiveTemplatesCompletionContributorEP extends CompletionContribut
     }
 
     public CompletionContributor getInstance() {
-               return new LiveTemplatesCompletionContributor();
+        return new LiveTemplatesCompletionContributor();
     }
 
-    @Override
-    public String getKey() {
-        return super.getKey();
-    }
 }
