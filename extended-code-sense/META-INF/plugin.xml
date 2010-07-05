@@ -6,12 +6,17 @@
 
   <description>Provides some platform code-sense functionality enhancements.</description>
 
-  <version>0.3</version>
+  <version>0.4</version>
 
   <change-notes>
         <![CDATA[
+        <p><b>Version 0.4 changes</b></p>
         <ul>
-            <u><b>Version 0.3 changes</b></u>
+            <li>Fixed auto-popup in Php array index expressions, like myArr[| .</li>
+        </ul>
+
+        <p><b>Version 0.3 changes</b></p>
+        <ul>
             <li>Auto pop up now works after "[" (array length expression).</li>
             <li>Auto popup feature extended for all languages, not only Php.</li>
         </ul>
