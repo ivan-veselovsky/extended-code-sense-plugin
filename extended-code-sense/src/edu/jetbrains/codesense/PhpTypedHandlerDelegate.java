@@ -208,6 +208,7 @@ public class PhpTypedHandlerDelegate extends TypedHandlerDelegate {
                || "ternary".equals(typeStr) 
                || "quest".equals(typeStr) // java
                || "colon".equals(typeStr)
+               || "array index".equals(typeStr) // Php
                ) {
            Debug.out("** type matches.");
            return true;
