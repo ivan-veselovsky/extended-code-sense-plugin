@@ -30,19 +30,24 @@
   <depends>com.intellij.modules.platform</depends>
 
   <application-components>
-    <!-- Add your application components here -->
+      <component>
+          <implementation-class>
+              edu.jetbrains.options.PluginOptionsConfigurable
+          </implementation-class>
+          <interface-class>
+              com.intellij.openapi.options.Configurable
+          </interface-class>
+      </component>
   </application-components>
 
   <project-components>
-    <!-- Add your project components here -->
   </project-components>
 
   <actions>
-    <!-- Add your actions here -->
   </actions>
 
   <extensions defaultExtensionNs="com.intellij">
-    <typedHandler implementation="edu.jetbrains.codesense.PhpTypedHandlerDelegate" />
+    <typedHandler implementation="edu.jetbrains.codesense.AutoPopupTypedHandlerDelegate" />
     <completion.contributor implementation="edu.jetbrains.completionWithLiveTemplates.AddLiveTemplatesCompletionContributorEP"
                             implementationClass="edu.jetbrains.completionWithLiveTemplates.LiveTemplatesCompletionContributor"
                             language="any"

@@ -20,14 +20,14 @@ import java.util.Locale;
  * Time: 7:41:46
  * To change this template use File | Settings | File Templates.
  */
-public class PhpTypedHandlerDelegate extends TypedHandlerDelegate {
+public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
 
   private final Condition<Editor> memberAutoLookupCondition = new MemberAutoLookupCondition();
 
     // TODO: take the value from the config option.
     private static boolean isAutoExpandInExpressions = true;
 
-    public PhpTypedHandlerDelegate() {
+    public AutoPopupTypedHandlerDelegate() {
     }
 
     public Result checkAutoPopup(char charTyped, final Project project, final Editor editor, final PsiFile file) {
@@ -51,6 +51,8 @@ public class PhpTypedHandlerDelegate extends TypedHandlerDelegate {
               || (c == '~') || (c == '^') || (c == '&') || (c == '|') || (c == '=') 
               || (c == '!') || (c == '(') || (c == '?') || (c == ':')
               || (c == '[') /* NB: for array length expression */
+              || (c == ',') /* parameter list */
+             // || (c == ';') // No.
               ;
       return result;
   }

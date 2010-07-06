@@ -3,6 +3,7 @@ package edu.jetbrains.options;
 import com.intellij.openapi.components.ApplicationComponent;
 import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.options.ConfigurationException;
+import com.intellij.ui.navigation.Place;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
 
@@ -15,51 +16,58 @@ import javax.swing.*;
  * Time: 21:18:11
  * To change this template use File | Settings | File Templates.
  */
-public class PluginOptionsConfigurable implements Configurable, ApplicationComponent {
+public class PluginOptionsConfigurable implements Configurable, ApplicationComponent /*, Place.Navigator */ {
+
+    private OptionsUIJPanel optionsUIJPanel;
 
     @NotNull
     public String getComponentName() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return this.getClass().getName();  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     public void initComponent() {
-        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     public void disposeComponent() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        optionsUIJPanel = null;
     }
 
     @Nls
     public String getDisplayName() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return "Extended Code Sense";
     }
 
     public Icon getIcon() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     public String getHelpTopic() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     public JComponent createComponent() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        if (optionsUIJPanel == null) {
+            optionsUIJPanel = new OptionsUIJPanel();
+        }
+        return optionsUIJPanel.getRootComponent();
     }
 
     public boolean isModified() {
+        //optionsUIJPanel.isModified(); TODO
         return false;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     public void apply() throws ConfigurationException {
-        //To change body of implemented methods use File | Settings | File Templates.
+        //optionsUIJPanel.apply();     TODO
     }
 
     public void reset() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        //optionsUIJPanel.rese     TODO
     }
 
     public void disposeUIResources() {
-        //To change body of implemented methods use File | Settings | File Templates.
+        optionsUIJPanel = null;
     }
+
+
 }
