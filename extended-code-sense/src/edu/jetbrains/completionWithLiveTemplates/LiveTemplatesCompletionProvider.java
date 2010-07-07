@@ -16,23 +16,22 @@ import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import com.intellij.util.ProcessingContext;
+import edu.jetbrains.options.BeanManager;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
-/**
- * Created by IntelliJ IDEA.
- * User: ivan
- * Date: 26.06.2010
- * Time: 21:14:04
- * To change this template use File | Settings | File Templates.
- */
 public class LiveTemplatesCompletionProvider extends CompletionProvider<CompletionParameters> {
 
     @Override
     protected void addCompletions(@NotNull CompletionParameters parameters,
                                   ProcessingContext context,
                                   @NotNull CompletionResultSet result) {
+        final boolean isShowLiveTemplates = BeanManager.storedBean().isShowLiveTemplates();
+        if (!isShowLiveTemplates) {
+            return;
+        }
+
         final PsiElement element = parameters.getPosition();
         final Project project = element.getProject();
         final PsiFile psiFile = element.getContainingFile();
@@ -54,6 +53,7 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
         final int offset = parameters.getOffset();
         final TemplateSettings templateSettings = TemplateSettings.getInstance();
         final Map<TemplateImpl, String> template2argument = findMatchingTemplates(psiFile, editor, templateSettings);
+        // TODO: revise this: why return?
         for (final CustomLiveTemplate customLiveTemplate : CustomLiveTemplate.EP_NAME.getExtensions()) {
             //int caretOffset = editor.getCaretModel().getOffset();
             if (customLiveTemplate.isApplicable(psiFile, offset)) {
@@ -235,13 +235,15 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
                                                            boolean hasArgument) {
       String key;
       List<TemplateImpl> candidates = Collections.emptyList();
-      for (int i = settings.getMaxKeyLength(); i >= 1; i--) {
+      final boolean isShowingOnEmptySpace = BeanManager.storedBean().isShowLiveTemplatesOnEmptySpace();
+      final int minKeyLength = isShowingOnEmptySpace ? 0 : 1;
+      for (int i = settings.getMaxKeyLength(); i >= minKeyLength; i--) {
         int wordStart = caretOffset - i;
         if (wordStart < 0) {
           continue;
         }
         key = text.subSequence(wordStart, caretOffset).toString();
-        if (Character.isJavaIdentifierStart(key.charAt(0))) {
+        if (key.length() > 0 && Character.isJavaIdentifierStart(key.charAt(0))) {
           if (wordStart > 0 && Character.isJavaIdentifierPart(text.charAt(wordStart - 1))) {
             continue;
           }

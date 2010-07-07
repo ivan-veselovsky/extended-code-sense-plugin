@@ -1,8 +1,12 @@
 package edu.jetbrains.options;
 
-public class OptionsBean {
+import java.io.Serializable;
+
+public class OptionsBean implements Serializable {
+
     private boolean showLiveTemplates;
     private boolean showLiveTemplatesOnEmptySpace;
+    
     private boolean enableAutoActivationInExpressions;
     private String autoActivationDelay;
     private boolean enableAutoActivation;

@@ -1,20 +1,31 @@
 package edu.jetbrains.options;
 
 import com.intellij.openapi.application.ApplicationManager;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/**
- * Created by IntelliJ IDEA.
- * User: ivan
- * Date: 06.07.2010
- * Time: 3:26:30
- * To change this template use File | Settings | File Templates.
- */
 public class BeanManager {
 
-//    @Nullable
-//    public static OptionsBean storedSettings() {
-//        return ApplicationManager.getApplication().getComponent(SmarterEditorSettingsComponent.class).getState();
-//    }
+    @NotNull
+    public static OptionsBean storedBean() {
+        OptionsBean bean =
+            ApplicationManager.getApplication().getComponent(ExtendedCodeSenseOptionsComponent.class).getState();
+        if (bean == null) {
+            bean = defaultBean();
+        }
+        return bean;
+    }
+
+    @NotNull
+    public static OptionsBean defaultBean() {
+        OptionsBean bean = new OptionsBean();
+        // default options:
+        bean.setAutoActivationDelay("200");
+        bean.setEnableAutoActivation(true);
+        bean.setEnableAutoActivationInExpressions(true);
+        bean.setShowLiveTemplates(true);
+        bean.setShowLiveTemplatesOnEmptySpace(false);
+        return bean;
+    }
 
 }

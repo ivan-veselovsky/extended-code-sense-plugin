@@ -5,7 +5,6 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 
 import javax.swing.*;
-import javax.swing.event.CaretListener;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
@@ -140,4 +139,5 @@ public class OptionsUIJPanel extends JPanel {
     public JComponent $$$getRootComponent$$$() {
         return rootPanel;
     }
+
 }

@@ -38,6 +38,14 @@
               com.intellij.openapi.options.Configurable
           </interface-class>
       </component>
+      <component>
+          <implementation-class>
+              edu.jetbrains.options.ExtendedCodeSenseOptionsComponent
+          </implementation-class>
+          <interface-class>
+              edu.jetbrains.options.ExtendedCodeSenseOptionsComponent
+          </interface-class>
+      </component>
   </application-components>
 
   <project-components>

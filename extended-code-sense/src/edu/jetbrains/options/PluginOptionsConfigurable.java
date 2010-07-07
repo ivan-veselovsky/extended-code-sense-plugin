@@ -3,26 +3,18 @@ package edu.jetbrains.options;
 import com.intellij.openapi.components.ApplicationComponent;
 import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.options.ConfigurationException;
-import com.intellij.ui.navigation.Place;
 import org.jetbrains.annotations.Nls;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 
-/**
- * Created by IntelliJ IDEA.
- * User: ivan
- * Date: 04.07.2010
- * Time: 21:18:11
- * To change this template use File | Settings | File Templates.
- */
 public class PluginOptionsConfigurable implements Configurable, ApplicationComponent /*, Place.Navigator */ {
 
     private OptionsUIJPanel optionsUIJPanel;
 
     @NotNull
     public String getComponentName() {
-        return this.getClass().getName();  //To change body of implemented methods use File | Settings | File Templates.
+        return this.getClass().getName();
     }
 
     public void initComponent() {
@@ -53,21 +45,22 @@ public class PluginOptionsConfigurable implements Configurable, ApplicationCompo
     }
 
     public boolean isModified() {
-        //optionsUIJPanel.isModified(); TODO
-        return false;  //To change body of implemented methods use File | Settings | File Templates.
+        OptionsBean bean = BeanManager.storedBean();
+        return optionsUIJPanel.isModified(bean);
     }
 
     public void apply() throws ConfigurationException {
-        //optionsUIJPanel.apply();     TODO
+        OptionsBean bean = BeanManager.storedBean();
+        optionsUIJPanel.getData(bean);
     }
 
     public void reset() {
-        //optionsUIJPanel.rese     TODO
+        OptionsBean bean = BeanManager.storedBean();
+        optionsUIJPanel.setData(bean);
     }
 
     public void disposeUIResources() {
         optionsUIJPanel = null;
     }
-
 
 }
