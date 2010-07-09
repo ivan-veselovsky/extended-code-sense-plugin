@@ -34,7 +34,7 @@ public class PluginOptionsConfigurable implements Configurable, ApplicationCompo
     }
 
     public String getHelpTopic() {
-        return null;
+        return null;// "extended.codesense.options";
     }
 
     public JComponent createComponent() {

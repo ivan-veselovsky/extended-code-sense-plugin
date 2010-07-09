@@ -7,9 +7,10 @@ public class OptionsBean implements Serializable {
     private boolean showLiveTemplates;
     private boolean showLiveTemplatesOnEmptySpace;
     
-    private boolean enableAutoActivationInExpressions;
+    private boolean outOfWordAutoActivation;
+    private boolean inWordAutoActivation;
+
     private String autoActivationDelay;
-    private boolean enableAutoActivation;
 
     public OptionsBean() {
     }
@@ -18,39 +19,39 @@ public class OptionsBean implements Serializable {
         return showLiveTemplates;
     }
 
-    public void setShowLiveTemplates(final boolean showLiveTemplates) {
-        this.showLiveTemplates = showLiveTemplates;
+    public void setShowLiveTemplates(final boolean showLiveTemplates1) {
+        showLiveTemplates = showLiveTemplates1;
     }
 
     public boolean isShowLiveTemplatesOnEmptySpace() {
         return showLiveTemplatesOnEmptySpace;
     }
 
-    public void setShowLiveTemplatesOnEmptySpace(final boolean showLiveTemplatesOnEmptySpace) {
-        this.showLiveTemplatesOnEmptySpace = showLiveTemplatesOnEmptySpace;
+    public void setShowLiveTemplatesOnEmptySpace(final boolean showLiveTemplatesOnEmptySpace1) {
+        showLiveTemplatesOnEmptySpace = showLiveTemplatesOnEmptySpace1;
     }
 
-    public boolean isEnableAutoActivationInExpressions() {
-        return enableAutoActivationInExpressions;
+    public boolean isOutOfWordAutoActivation() {
+        return outOfWordAutoActivation;
     }
 
-    public void setEnableAutoActivationInExpressions(final boolean enableAutoActivationInExpressions) {
-        this.enableAutoActivationInExpressions = enableAutoActivationInExpressions;
+    public void setOutOfWordAutoActivation(final boolean outOfWordAutoActivation1) {
+        outOfWordAutoActivation = outOfWordAutoActivation1;
     }
 
     public String getAutoActivationDelay() {
         return autoActivationDelay;
     }
 
-    public void setAutoActivationDelay(final String autoActivationDelay) {
-        this.autoActivationDelay = autoActivationDelay;
+    public void setAutoActivationDelay(final String autoActivationDelay1) {
+        autoActivationDelay = autoActivationDelay1;
     }
 
-    public boolean isEnableAutoActivation() {
-        return enableAutoActivation;
+    public boolean isInWordAutoActivation() {
+        return inWordAutoActivation;
     }
 
-    public void setEnableAutoActivation(final boolean enableAutoActivation) {
-        this.enableAutoActivation = enableAutoActivation;
+    public void setInWordAutoActivation(final boolean inWordAutoActivation1) {
+        inWordAutoActivation = inWordAutoActivation1;
     }
 }

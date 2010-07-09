@@ -2,7 +2,6 @@ package edu.jetbrains.options;
 
 import com.intellij.openapi.application.ApplicationManager;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 public class BeanManager {
 
@@ -21,10 +20,12 @@ public class BeanManager {
         OptionsBean bean = new OptionsBean();
         // default options:
         bean.setAutoActivationDelay("200");
-        bean.setEnableAutoActivation(true);
-        bean.setEnableAutoActivationInExpressions(true);
+        bean.setInWordAutoActivation(true);
+        bean.setOutOfWordAutoActivation(false);
+
         bean.setShowLiveTemplates(true);
         bean.setShowLiveTemplatesOnEmptySpace(false);
+
         return bean;
     }
 

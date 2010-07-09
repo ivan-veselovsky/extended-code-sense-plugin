@@ -1,23 +1,14 @@
 package edu.jetbrains.codesense;
 
 import com.intellij.codeInsight.AutoPopupController;
-import com.intellij.codeInsight.CodeInsightSettings;
 import com.intellij.codeInsight.completion.DotAutoLookupHandler;
 import com.intellij.codeInsight.editorActions.TypedHandlerDelegate;
-import com.intellij.lang.ASTNode;
-import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.util.Condition;
 import com.intellij.psi.*;
-import com.intellij.psi.tree.IElementType;
-import com.intellij.psi.util.PsiUtilBase;
 import edu.jetbrains.options.BeanManager;
-import edu.jetbrains.util.Debug;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.Locale;
+import edu.jetbrains.util.Util;
 
 public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
 
@@ -27,15 +18,21 @@ public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
     }
 
     public Result checkAutoPopup(char charTyped, final Project project, final Editor editor, final PsiFile file) {
-      Debug.out(" ===== checkPopupFor: ["+charTyped+"]");
-      final boolean isAutoActivation = BeanManager.storedBean().isEnableAutoActivation();
-      final boolean isAutoActivationInExpressions = BeanManager.storedBean().isEnableAutoActivationInExpressions();
-      if ( isAutoActivation && ((isAutoActivationInExpressions
-              //&& mayPrecedeAnIdentifierInExpression(charTyped)
-            )
-              || charTyped == '$' /*identifier start in PHP */
-              || Character.isJavaIdentifierPart(charTyped) ) ) {
-          //memberAutoLookupCondition.setAutoActivationInExpressions(isAutoActivationInExpressions);
+      //Debug.out(" ===== checkPopupFor: ["+charTyped+"]");
+      final boolean isInWordAutoActivation = BeanManager.storedBean().isInWordAutoActivation();
+      final boolean isOutOfWordAutoActivation = BeanManager.storedBean().isOutOfWordAutoActivation();
+      boolean isAuto = false;
+      if ( isInWordAutoActivation || isOutOfWordAutoActivation ) {
+          final boolean inWord = (charTyped == '$' /*identifier start in PHP */
+                        || Character.isJavaIdentifierPart(charTyped));
+          if (inWord) {
+              isAuto = isInWordAutoActivation;
+          } else {
+              isAuto = isOutOfWordAutoActivation;
+          }
+      }
+      if ( isAuto ) {
+          //memberAutoLookupCondition.setAutoActivationInExpressions(isAutoActivationEverywhere);
           AutoPopupController controller = AutoPopupController.getInstance(project); // .autoPopupMemberLookup(editor, memberAutoLookupCondition)
           final Runnable request = new Runnable(){
             public void run(){
@@ -53,21 +50,12 @@ public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
       return Result.CONTINUE;
     }
 
-    private static Integer getInt(String s) {
-        Integer i = null;
-        try {
-            i = Integer.parseInt(s);
-        } catch (RuntimeException e) {
-        }
-        return i;
-    }
-
     private static int getDelay() {
         String delayString = BeanManager.storedBean().getAutoActivationDelay();
-        Integer delay = getInt(delayString);
+        Integer delay = Util.getInt(delayString);
         if (delay == null) {
             delayString = BeanManager.defaultBean().getAutoActivationDelay();
-            delay = getInt(delayString);
+            delay = Util.getInt(delayString);
         }
         return delay;
     }
