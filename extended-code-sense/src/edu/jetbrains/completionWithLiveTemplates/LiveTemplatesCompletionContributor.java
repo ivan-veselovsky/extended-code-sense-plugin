@@ -12,38 +12,25 @@ import com.intellij.util.ProcessingContext;
 //import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-/**
- * Created by IntelliJ IDEA.
- * User: ivan
- * Date: 26.06.2010
- * Time: 19:55:23
- * To change this template use File | Settings | File Templates.
- */
 public class LiveTemplatesCompletionContributor extends CompletionContributor {
 
     private final LiveTemplatesCompletionProvider provider = new LiveTemplatesCompletionProvider();
     
     public LiveTemplatesCompletionContributor() {
-         //CompletionType completionType =
-        // TODO: remake for PHP:
-        //CharPattern charPattern = new CharPattern() {};
-        //ElementPattern elementPattern = charPattern.javaIdentifierPart();
         ElementPattern elementPattern = new ElementPattern() {
             public boolean accepts(@Nullable Object o) {
-                return true;  //To change body of implemented methods use File | Settings | File Templates.
+                return true;
             }
 
             public boolean accepts(@Nullable Object o, ProcessingContext context) {
-                return true;  //To change body of implemented methods use File | Settings | File Templates.
+                return true;
             }
 
             public ElementPatternCondition getCondition() {
-                return null;  //To change body of implemented methods use File | Settings | File Templates.
+                return null;
             }
         };
        extend(CompletionType.BASIC, elementPattern, provider);
-       // extend(CompletionType.SMART, elementPattern, provider);
-        // TODO: will use it also for CompletionType.SMART ?
     }
 
 //    @Override

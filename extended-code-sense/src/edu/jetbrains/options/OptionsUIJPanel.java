@@ -134,9 +134,9 @@ public class OptionsUIJPanel extends JPanel {
         showLiveTemplatesCB.setText("Show live templates in auto-complete list");
         lowerPanel.add(showLiveTemplatesCB, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         showLiveTemplatesOnEmptySpaceCB = new JCheckBox();
-        showLiveTemplatesOnEmptySpaceCB.setActionCommand("Show live templates in out-of-word completion");
+        showLiveTemplatesOnEmptySpaceCB.setActionCommand("");
         showLiveTemplatesOnEmptySpaceCB.setMargin(new Insets(5, 5, 5, 5));
-        showLiveTemplatesOnEmptySpaceCB.setText("Show live templates on empty space");
+        showLiveTemplatesOnEmptySpaceCB.setText("Show live templates in out-of-word completion");
         showLiveTemplatesOnEmptySpaceCB.putClientProperty("html.disable", Boolean.TRUE);
         lowerPanel.add(showLiveTemplatesOnEmptySpaceCB, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         upperPanel = new JPanel();

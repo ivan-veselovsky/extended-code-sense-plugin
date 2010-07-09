@@ -1,5 +1,6 @@
 package edu.jetbrains.options;
 
+import com.intellij.openapi.application.Application;
 import com.intellij.openapi.application.ApplicationManager;
 import org.jetbrains.annotations.NotNull;
 
@@ -7,8 +8,11 @@ public class BeanManager {
 
     @NotNull
     public static OptionsBean storedBean() {
-        OptionsBean bean =
-            ApplicationManager.getApplication().getComponent(ExtendedCodeSenseOptionsComponent.class).getState();
+        Application application = ApplicationManager.getApplication();
+        OptionsBean bean = null;
+        if (application != null) {
+            bean = application.getComponent(ExtendedCodeSenseOptionsComponent.class).getState();
+        }
         if (bean == null) {
             bean = defaultBean();
         }
