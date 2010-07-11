@@ -19,7 +19,7 @@ public class BeanManagerTest {
 
     @Test
     public void getDefaultValues() {
-        OptionsBean bean = BeanManager.storedBean();
+        OptionsBean bean = BeanManager.defaultBean();
         
         // check defaults:
         Assert.assertEquals( "200", bean.getAutoActivationDelay() );

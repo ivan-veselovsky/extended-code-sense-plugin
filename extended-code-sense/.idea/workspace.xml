@@ -15,17 +15,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="9616052c-29ee-47a3-b9c6-5a483e56f36e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-test/edu/jetbrains/util/UtilTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/META-INF/plugin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/AddLiveTemplatesCompletionContributorEP.java" afterPath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/AddLiveTemplatesCompletionContributorEP.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-test/edu/jetbrains/options/BeanManagerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extended-code-sense.iml" afterPath="$PROJECT_DIR$/extended-code-sense.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-test/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegateTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extended-code-sense.jar" afterPath="$PROJECT_DIR$/extended-code-sense.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-test/edu/jetbrains/options/MockApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src-test/edu/jetbrains/options/BeanManagerTest.java" afterPath="$PROJECT_DIR$/src-test/edu/jetbrains/options/BeanManagerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegate.java" afterPath="$PROJECT_DIR$/src/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionProvider.java" afterPath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src-test/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegateTest.java" afterPath="$PROJECT_DIR$/src-test/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegateTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jetbrains/options/BeanManager.java" afterPath="$PROJECT_DIR$/src/edu/jetbrains/options/BeanManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src-test/edu/jetbrains/util/DebugTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java" afterPath="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/jetbrains/options/OptionsUIJPanel.java" afterPath="$PROJECT_DIR$/src/edu/jetbrains/options/OptionsUIJPanel.java" />
     </list>
     <ignored path="$USER_HOME_GRIFFON$/" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,6 +42,138 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegate.java" line="24" class="edu.jetbrains.codesense.AutoPopupTypedHandlerDelegate" package="edu.jetbrains.codesense">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/CompletionContributor.java" line="205" class="com.intellij.codeInsight.completion.CompletionContributor" package="com.intellij.codeInsight.completion">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/CompletionContributor.java" line="197" class="com.intellij.codeInsight.completion.CompletionContributor" package="com.intellij.codeInsight.completion">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateImpl.java" line="433" class="com.intellij.codeInsight.template.impl.TemplateImpl" package="com.intellij.codeInsight.template.impl">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateImpl.java" line="427" class="com.intellij.codeInsight.template.impl.TemplateImpl" package="com.intellij.codeInsight.template.impl">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/ListTemplatesHandler.java" line="67" class="com.intellij.codeInsight.template.impl.ListTemplatesHandler" package="com.intellij.codeInsight.template.impl">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/ListTemplatesHandler.java" line="90" class="com.intellij.codeInsight.template.impl.ListTemplatesHandler" package="com.intellij.codeInsight.template.impl">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/ListTemplatesHandler.java" line="41" class="com.intellij.codeInsight.template.impl.ListTemplatesHandler" package="com.intellij.codeInsight.template.impl">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/editorActions/TabHandler.java" line="44" class="com.intellij.codeInsight.template.impl.editorActions.TabHandler" package="com.intellij.codeInsight.template.impl.editorActions">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateManagerImpl.java" line="318" class="com.intellij.codeInsight.template.impl.TemplateManagerImpl" package="com.intellij.codeInsight.template.impl">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -84,67 +215,58 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AutoPopupTypedHandlerDelegateTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src-test/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegateTest.java">
+      <file leaf-file-name="TemplateImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="34" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LiveTemplatesCompletionContributor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="91" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0">
+            <state line="240" column="0" selection-start="7679" selection-end="7679" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LiveTemplatesCompletionProvider.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TemplateManagerImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="237" column="0" selection-start="8542" selection-end="8542" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractList.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.6.0_20/src.zip!/java/util/AbstractList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="338" column="0" selection-start="11482" selection-end="11482" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LiveTemplatesCompletionProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="31" selection-start="4129" selection-end="4129" vertical-scroll-proportion="1.7775666">
+            <state line="43" column="0" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompletionProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/CompletionProvider.java">
+      <file leaf-file-name="plugin.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="22" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
+            <state line="8" column="14" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddLiveTemplatesCompletionContributorEP.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/AddLiveTemplatesCompletionContributorEP.java">
+      <file leaf-file-name="AutoPopupTypedHandlerDelegateTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src-test/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegateTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompletionContributorEP.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/CompletionContributorEP.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="13" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LanguageExtensionPoint.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../maia/community/platform/platform-api/src/com/intellij/lang/LanguageExtensionPoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="11" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="23" column="77" selection-start="929" selection-end="929" vertical-scroll-proportion="0.26086956">
+              <folding>
+                <marker date="1278810987425" expanded="true" signature="1308:1357" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,7 +274,7 @@
       <file leaf-file-name="AutoPopupTypedHandlerDelegate.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="18" selection-start="1880" selection-end="1880" vertical-scroll-proportion="0.0">
+            <state line="102" column="0" selection-start="4185" selection-end="4185" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -161,18 +283,25 @@
       <file leaf-file-name="BeanManagerTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src-test/edu/jetbrains/options/BeanManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="8" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="21" column="0" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OptionsBean.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/options/OptionsBean.java">
+      <file leaf-file-name="CompletionProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/CompletionProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="18" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.0">
+            <state line="42" column="0" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../maia/community/platform/platform-impl/src/com/intellij/openapi/application/impl/ApplicationImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="699" column="0" selection-start="23591" selection-end="23591" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -193,22 +322,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/edu/jetbrains/options/OptionsBean.java" />
-        <option value="$PROJECT_DIR$/src/edu/jetbrains/util/Util.java" />
-        <option value="$PROJECT_DIR$/src/edu/jetbrains/util/Debug.java" />
-        <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
-        <option value="$PROJECT_DIR$/src/edu/jetbrains/options/OptionsUIJPanel.java" />
         <option value="$PROJECT_DIR$/src/edu/jetbrains/options/PluginOptionsConfigurable.java" />
         <option value="$PROJECT_DIR$/src/edu/jetbrains/options/ExtendedCodeSenseOptionsUi.form" />
         <option value="$PROJECT_DIR$/src-test/edu/jetbrains/util/UtilTest.java" />
         <option value="$PROJECT_DIR$/src-test/edu/jetbrains/util/DebugTest.java" />
-        <option value="$PROJECT_DIR$/src/edu/jetbrains/options/BeanManager.java" />
-        <option value="$PROJECT_DIR$/src/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegate.java" />
         <option value="$PROJECT_DIR$/src-test/edu/jetbrains/options/BeanManager.java" />
-        <option value="$PROJECT_DIR$/src-test/edu/jetbrains/options/BeanManagerTest.java" />
-        <option value="$PROJECT_DIR$/src-test/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegateTest.java" />
-        <option value="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java" />
         <option value="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/AddLiveTemplatesCompletionContributorEP.java" />
+        <option value="$PROJECT_DIR$/src-test/edu/jetbrains/options/ApplicationMock.java" />
+        <option value="$PROJECT_DIR$/src-test/edu/jetbrains/options/MockApplication.java" />
+        <option value="$PROJECT_DIR$/src/edu/jetbrains/options/BeanManager.java" />
+        <option value="$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java" />
+        <option value="$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionProvider.java" />
+        <option value="$PROJECT_DIR$/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/src-test/edu/jetbrains/options/BeanManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegate.java" />
+        <option value="$PROJECT_DIR$/src-test/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegateTest.java" />
       </list>
     </option>
   </component>
@@ -285,204 +414,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jetbrains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jetbrains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="options" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jetbrains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jetbrains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codesense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jetbrains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jetbrains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="options" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jetbrains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="completionWithLiveTemplates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="extended-code-sense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jetbrains" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codesense" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Favorites" />
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Tests" />
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="209" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="236" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.24083333" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="preferences.editor" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="232" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="239" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="906" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="914" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="232" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="228" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="preferences.sourceCode" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
@@ -493,7 +466,7 @@
       <recent name="G:\home\ivan\git\repka\extended-code-sense\src\edu\jetbrains\options" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in extended-code-sense">
+  <component name="RunManager" selected="Plugin.Plugin2">
     <configuration default="false" name="UtilTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" />
       <extension name="snapshooter" />
@@ -569,7 +542,13 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57920" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -617,7 +596,13 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="60151" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -832,25 +817,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1692" height="1026" extended-state="0" />
+    <frame x="11" y="1" width="1692" height="1026" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902828" sideWeight="0.5577367" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18244803" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30811808" sideWeight="0.66281754" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2251732" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44341803" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2517321" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33371824" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40415704" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48498845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3222632" sideWeight="0.14665127" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23493235" sideWeight="0.17090069" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3222632" sideWeight="0.53233254" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23493235" sideWeight="0.408776" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3048499" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34064665" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902828" sideWeight="0.5577367" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -928,121 +913,117 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src-test/edu/jetbrains/util/UtilTest.java">
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/editorActions/TabHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="942" selection-end="942" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/util/Debug.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
+        <state line="44" column="0" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src-test/edu/jetbrains/util/DebugTest.java">
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/editorActions/TypedHandlerDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="16" selection-start="1901" selection-end="1901" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/platform-api/src/com/intellij/openapi/application/ApplicationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="28" selection-start="899" selection-end="899" vertical-scroll-proportion="0.43589744">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/options/BeanManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="30" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/options/OptionsBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="18" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src-test/edu/jetbrains/options/BeanManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="8" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="18" selection-start="1880" selection-end="1880" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src-test/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="34" selection-start="685" selection-end="685" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/platform-api/src/com/intellij/lang/LanguageExtensionPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="11" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/CompletionContributorEP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/CompletionProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="22" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/AddLiveTemplatesCompletionContributorEP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
+        <state line="48" column="0" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionContributor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="91" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0">
+        <state line="24" column="0" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/CompletionContributor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="0" selection-start="11021" selection-end="11021" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/AbstractCompletionContributor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1928" selection-end="1928" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/psi/impl/source/PsiFileImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="854" column="0" selection-start="27960" selection-end="27960" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.6.0_20/src.zip!/java/util/AbstractList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="338" column="0" selection-start="11482" selection-end="11482" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-api/src/com/intellij/codeInsight/completion/CompletionProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="1584" selection-end="1584" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/platform-impl/src/com/intellij/openapi/application/impl/ApplicationImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="699" column="0" selection-start="23591" selection-end="23591" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="237" column="0" selection-start="8542" selection-end="8542" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../maia/community/platform/lang-impl/src/com/intellij/codeInsight/template/impl/TemplateImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="240" column="0" selection-start="7679" selection-end="7679" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/completionWithLiveTemplates/LiveTemplatesCompletionProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="31" selection-start="4129" selection-end="4129" vertical-scroll-proportion="1.7775666">
+        <state line="43" column="0" selection-start="1838" selection-end="1838" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/META-INF/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src-test/edu/jetbrains/options/BeanManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="0" selection-start="4185" selection-end="4185" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src-test/edu/jetbrains/codesense/AutoPopupTypedHandlerDelegateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="77" selection-start="929" selection-end="929" vertical-scroll-proportion="0.26086956">
+          <folding>
+            <marker date="1278810987425" expanded="true" signature="1308:1357" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

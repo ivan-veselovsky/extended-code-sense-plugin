@@ -6,9 +6,20 @@ import org.jetbrains.annotations.NotNull;
 
 public class BeanManager {
 
+    private static Application mockApplication;
+
+    /* 4junit */
+    public static void setMockApplication(Application m) {
+        mockApplication = m;
+    }
+
     @NotNull
     public static OptionsBean storedBean() {
         Application application = ApplicationManager.getApplication();
+        if (application == null) {
+            application = mockApplication;
+        }
+
         OptionsBean bean = null;
         if (application != null) {
             bean = application.getComponent(ExtendedCodeSenseOptionsComponent.class).getState();

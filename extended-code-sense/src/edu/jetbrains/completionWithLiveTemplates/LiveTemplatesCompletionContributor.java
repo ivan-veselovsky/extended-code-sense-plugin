@@ -8,8 +8,10 @@ import com.intellij.codeInsight.completion.*;
 import com.intellij.patterns.ElementPattern;
 import com.intellij.patterns.ElementPatternCondition;
 //import com.intellij.patterns.ObjectPattern;
+import com.intellij.psi.PsiComment;
 import com.intellij.util.ProcessingContext;
 //import org.jetbrains.annotations.NotNull;
+import edu.jetbrains.util.Debug;
 import org.jetbrains.annotations.Nullable;
 
 public class LiveTemplatesCompletionContributor extends CompletionContributor {
@@ -19,11 +21,17 @@ public class LiveTemplatesCompletionContributor extends CompletionContributor {
     public LiveTemplatesCompletionContributor() {
         ElementPattern elementPattern = new ElementPattern() {
             public boolean accepts(@Nullable Object o) {
+                Debug.out("object = ["+o+"]");
+//                if (o instanceof PsiComment) {
+//                    Debug.out("rejected for comment.");
+//                    return false;
+//                }
                 return true;
             }
 
             public boolean accepts(@Nullable Object o, ProcessingContext context) {
-                return true;
+                Debug.out("context = ["+context+"]");
+                return accepts(o);
             }
 
             public ElementPatternCondition getCondition() {

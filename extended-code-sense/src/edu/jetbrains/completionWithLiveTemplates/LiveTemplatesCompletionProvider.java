@@ -8,11 +8,13 @@ import com.intellij.codeInsight.template.CustomTemplateCallback;
 import com.intellij.codeInsight.template.impl.TemplateImpl;
 import com.intellij.codeInsight.template.impl.TemplateManagerImpl;
 import com.intellij.codeInsight.template.impl.TemplateSettings;
+import com.intellij.openapi.command.CommandProcessor;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
 import com.intellij.openapi.fileEditor.FileEditorManager;
 import com.intellij.openapi.project.Project;
+import com.intellij.psi.PsiDocumentManager;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import com.intellij.util.ProcessingContext;
@@ -38,8 +40,7 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
         if (psiFile == null) {
             return; // XXX: ever happens?
         }
-        //VirtualFile virtualFile = psiFile.getVirtualFile();
-        
+
         // TODO: see if these is a better way to get the editor; Also check if the editor is needed at all there.
         // ! Normally we should use the editor that taken from LookupElement#handleInsert(InsertionContext c)
         // Actually there are 2 obstacles:
@@ -183,11 +184,8 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
         return null;
       }
 
-//      CommandProcessor.getInstance().executeCommand(myProject, new Runnable() {
-//        public void run() {
-//          PsiDocumentManager.getInstance(myProject).commitDocument(document);
-//        }
-//      }, "", null);
+      final Project myProject = file.getProject();
+      PsiDocumentManager.getInstance(myProject).commitDocument(document);
 
       candidatesWithoutArgument = TemplateManagerImpl.filterApplicableCandidates(file, caretOffset, candidatesWithoutArgument);
       candidatesWithArgument = TemplateManagerImpl.filterApplicableCandidates(file, argumentOffset, candidatesWithArgument);
@@ -196,16 +194,6 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
       addToMap(candidate2Argument, candidatesWithArgument, argument);
       return candidate2Argument;
     }
-
-//    public static List<TemplateImpl> filterApplicableCandidates(PsiFile file, int caretOffset, List<TemplateImpl> candidates) {
-//      List<TemplateImpl> result = new ArrayList<TemplateImpl>();
-//      for (TemplateImpl candidate : candidates) {
-//        if (TemplateManagerImpl.isApplicable(file, caretOffset - candidate.getKey().length(), candidate)) {
-//          result.add(candidate);
-//        }
-//      }
-//      return result;
-//    }
 
     private static <T, U> void addToMap(@NotNull Map<T, U> map, @NotNull Collection<? extends T> keys, U value) {
       for (T key : keys) {
@@ -269,17 +257,12 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
     }
 
     private static List<TemplateImpl> collectMatchingCandidates(TemplateSettings settings, String key, boolean hasArgument) {
-        //final Collection<TemplateImpl> templates = settings.getTemplates(key);
-        final Collection<TemplateImpl> templates = getSemiMatchingTemplates(settings, key);
+      final Collection<TemplateImpl> templates = getSemiMatchingTemplates(settings, key);
       List<TemplateImpl> candidates = new ArrayList<TemplateImpl>();
       for (TemplateImpl template : templates) {
         if (template.isDeactivated()) {
           continue;
         }
-          // iv: we don;'t need to check up the shortcut char:
-//        if (shortcutChar != null && getShortcutChar(template) != shortcutChar) {
-//          continue;
-//        }
         if (template.isSelectionTemplate()) {
           continue;
         }
