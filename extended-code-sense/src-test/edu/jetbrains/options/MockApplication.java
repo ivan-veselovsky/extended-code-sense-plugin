@@ -14,6 +14,7 @@ import com.intellij.openapi.util.Computable;
 import com.intellij.openapi.util.Condition;
 import com.intellij.openapi.util.Key;
 import com.intellij.util.messages.MessageBus;
+import com.intellij.util.pico.DefaultPicoContainer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.picocontainer.PicoContainer;
@@ -24,6 +25,8 @@ import java.util.concurrent.Future;
 public class MockApplication implements Application {
 
     private ExtendedCodeSenseOptionsComponent codeSenseOptionsComponent;
+
+    private PicoContainer picoContainer = new DefaultPicoContainer() {};
 
     public void runReadAction(Runnable action) {
         
@@ -213,7 +216,7 @@ public class MockApplication implements Application {
 
     @NotNull
     public PicoContainer getPicoContainer() {
-        return null; 
+        return picoContainer; 
     }
 
     public MessageBus getMessageBus() {

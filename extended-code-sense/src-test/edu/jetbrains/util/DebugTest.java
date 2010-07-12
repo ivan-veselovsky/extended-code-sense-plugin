@@ -1,6 +1,6 @@
 package edu.jetbrains.util;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class DebugTest {
 

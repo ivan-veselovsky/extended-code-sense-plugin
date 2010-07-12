@@ -11,6 +11,7 @@ public class OptionsBean implements Serializable {
     private boolean inWordAutoActivation;
 
     private String autoActivationDelay;
+    private String outOfWordActivationCharacters;
 
     public OptionsBean() {
     }
@@ -53,5 +54,13 @@ public class OptionsBean implements Serializable {
 
     public void setInWordAutoActivation(final boolean inWordAutoActivation1) {
         inWordAutoActivation = inWordAutoActivation1;
+    }
+
+    public String getOutOfWordActivationCharacters() {
+        return outOfWordActivationCharacters;
+    }
+
+    public void setOutOfWordActivationCharacters(final String outOfWordActivationCharacters) {
+        this.outOfWordActivationCharacters = outOfWordActivationCharacters;
     }
 }

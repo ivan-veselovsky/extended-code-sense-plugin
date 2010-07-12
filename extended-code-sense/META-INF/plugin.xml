@@ -6,10 +6,24 @@
 
   <description>Provides some platform code-sense functionality enhancements.</description>
 
-  <version>0.7</version>
+  <version>1.0</version>
 
   <change-notes>
         <![CDATA[
+        <p><b>Version 1.0 changes</b></p>
+        <ul>
+           <li> fixed invocation of live templates with arguments.</li>
+           <li> fixed context dependency of the templates shown in the completion popup.</li>
+     	   <li> added options to control auto popup invocation in out-of-word context. </li>
+           <li> the tests now cover the main functionality. </li>
+        </ul>
+        <p><b>Version 0.7 changes</b></p>
+        <ul>
+           <li> revised the base logic of the auto-popup -- now the logic is more straight and psi-independent. </li>
+	   <li> fixed bug: live templates not applicable to the context were shown (e.g. in comments) </li>
+           <li> the tests somewhat enhanced </li>
+        </ul>
+
         <p><b>Version 0.4 changes</b></p>
         <ul>
             <li>Fixed auto-popup in Php array index expressions, like myArr[| .</li>

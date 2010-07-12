@@ -4,7 +4,6 @@ import com.intellij.codeInsight.AutoPopupController;
 import com.intellij.codeInsight.completion.DotAutoLookupHandler;
 import com.intellij.codeInsight.editorActions.TypedHandlerDelegate;
 import com.intellij.openapi.editor.Editor;
-import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.*;
@@ -16,24 +15,19 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
 
-//    private static int instances = 0;
     final AtomicLong scheduledOrderNumber = new AtomicLong(0);
 
     public AutoPopupTypedHandlerDelegate() {
-//        instances++;
-//        if (instances > 1) {
-//            Debug.out("WARNING: number of created instances is "+instances);
-//        }
     }
 
 //    @Override
 //    public Result beforeCharTyped(char c, Project project, Editor editor, PsiFile file, FileType fileType) {
-//        //Debug.out("before char typed: ["+c+"]");
+//        Debug.out("before char typed: ["+c+"]");
 //        return super.beforeCharTyped(c, project, editor, file, fileType);
 //    }
 
     public Result checkAutoPopup(char charTyped, Project project, Editor editor, PsiFile file) {
-        //Debug.out("check auto popup: ["+charTyped+"]");
+        Debug.out("check auto popup: ["+charTyped+"]");
         if (editor != null && (editor.isDisposed() || editor.isViewer())) {
             return Result.CONTINUE;
         }
@@ -41,15 +35,17 @@ public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
         final boolean isOutOfWordAutoActivation = BeanManager.storedBean().isOutOfWordAutoActivation();
         boolean isAuto = false;
         if ( isInWordAutoActivation || isOutOfWordAutoActivation ) {
-            final boolean inWord = Character.isJavaIdentifierPart(charTyped);
-            if (inWord) {
+            final boolean isWord = Character.isJavaIdentifierPart(charTyped);
+            if (isWord) {
                isAuto = isInWordAutoActivation
-                  && isIdentifierInEditorContext(charTyped, editor);
+                    && isIdentifierOrKeywordInEditorContext(charTyped, editor);
             } else {
-               isAuto = isOutOfWordAutoActivation;
+               isAuto = isOutOfWordAutoActivation
+                    && isAfterConfiguredTrigger(charTyped, editor);
             }
       }
       if ( isAuto ) {
+          Debug.out("***** scheduled.");
           schedulePopupImpl(project, editor, file);
           return Result.STOP;
       }
@@ -58,7 +54,7 @@ public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
 
 //    @Override
 //    public Result charTyped(char c, Project project, Editor editor, PsiFile file) {
-//        //Debug.out("after char typed: ["+c+"]");
+//        Debug.out("after char typed: ["+c+"]");
 //        return Result.CONTINUE;
 //    }
 
@@ -67,7 +63,7 @@ public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
             private final long myOrderNumber = scheduledOrderNumber.incrementAndGet();
             public void run(){
               if (scheduledOrderNumber.get() > myOrderNumber) {
-                  //Debug.out("superseded by a later request. noop.");
+                  Debug.out("superseded by a later request. noop.");
                   return;
               }
             if (project.isDisposed()) { return; }
@@ -100,7 +96,7 @@ public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
 //        return isIdentifier;
 //    }
 
-    protected boolean isIdentifierInEditorContext(char charTyped, Editor editor) {
+    protected boolean isIdentifierOrKeywordInEditorContext(char charTyped, Editor editor) {
         final int typedOffset = editor.getCaretModel().getOffset();
         final CharSequence seq = editor.getDocument().getCharsSequence();
         return isIdentifierInEditorContext(charTyped, seq, typedOffset);        
@@ -126,6 +122,49 @@ public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
         }
         boolean result = Character.isJavaIdentifierStart(expectedStartOfIdentifier);
         return result;
+    }
+
+    protected boolean isAfterConfiguredTrigger(char charTyped, Editor editor) {
+        final int typedOffset = editor.getCaretModel().getOffset();
+        final CharSequence seq = editor.getDocument().getCharsSequence();
+        return isAfterConfiguredTrigger(charTyped, seq, typedOffset);
+    }
+
+    public static boolean isBlank(char c) {
+        return (c <= ' ')
+                || c == '\u00A0'
+                || c == '\u2007'
+                || c == '\u202F'
+                || Character.isWhitespace(c);
+    }
+
+    static boolean isAfterConfiguredTrigger(char charTyped, CharSequence seq, final int typedOffset) {
+        int stopperOffset = typedOffset;
+        char stopper = 0;
+        while (true) {
+            if (stopperOffset == typedOffset) {
+                stopper = charTyped;
+            } else {
+                if (stopperOffset < 0) {
+                    stopper = 0;
+                    break; // start of the file is also a stopper
+                }
+                stopper = seq.charAt(stopperOffset);
+            }
+            stopperOffset--;
+            if (!isBlank(stopper)) {
+                break; // stopper found
+            }
+        }
+        Debug.out("stopper char = ["+stopper+"]");
+        if (stopper == 0) {
+            return false;
+        } else {
+            String activationCharacters = BeanManager.storedBean().getOutOfWordActivationCharacters();
+            boolean result = activationCharacters.indexOf(stopper) >= 0;
+            Debug.out("is after trigger: ["+result+"]");
+            return result;
+        }
     }
 
 //    static boolean isIdentifier(String text) {
