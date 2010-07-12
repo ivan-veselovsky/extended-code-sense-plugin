@@ -20,12 +20,6 @@ public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
     public AutoPopupTypedHandlerDelegate() {
     }
 
-//    @Override
-//    public Result beforeCharTyped(char c, Project project, Editor editor, PsiFile file, FileType fileType) {
-//        Debug.out("before char typed: ["+c+"]");
-//        return super.beforeCharTyped(c, project, editor, file, fileType);
-//    }
-
     public Result checkAutoPopup(char charTyped, Project project, Editor editor, PsiFile file) {
         Debug.out("check auto popup: ["+charTyped+"]");
         if (editor != null && (editor.isDisposed() || editor.isViewer())) {
@@ -51,12 +45,6 @@ public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
       }
       return Result.CONTINUE;
     }
-
-//    @Override
-//    public Result charTyped(char c, Project project, Editor editor, PsiFile file) {
-//        Debug.out("after char typed: ["+c+"]");
-//        return Result.CONTINUE;
-//    }
 
     protected /* 4junit */ void schedulePopupImpl(final Project project, final Editor editor, final PsiFile file) {
         final Runnable request = new Runnable(){
@@ -87,14 +75,6 @@ public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
         Integer delay = Util.getInt(delayString);
         return delay;
     }
-
-//    protected final boolean isInIdentifier(char charTyped, Project project, Editor editor, PsiFile file) {
-//        String text = getPrecedingElementText(project, editor, file);
-//        Debug.out("text = ["+text+"]");
-//        boolean isIdentifier = isIdentifier(text);
-//        Debug.out("is identifier: "+ isIdentifier);
-//        return isIdentifier;
-//    }
 
     protected boolean isIdentifierOrKeywordInEditorContext(char charTyped, Editor editor) {
         final int typedOffset = editor.getCaretModel().getOffset();
@@ -166,51 +146,5 @@ public class AutoPopupTypedHandlerDelegate extends TypedHandlerDelegate {
             return result;
         }
     }
-
-//    static boolean isIdentifier(String text) {
-//        if (text == null || text.length() < 1) {
-//            return false;
-//        }
-//        for (int i=0; i<text.length(); i++) {
-//            char c = text.charAt(i);
-//            if (i == 0 && !Character.isJavaIdentifierStart(c)) {
-//                return false;
-//            } else if (!Character.isJavaIdentifierPart(c)) {
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
-
-//    protected String getPrecedingElementText(Project project, Editor editor, PsiFile file) {
-////        final Document document = editor.getDocument();
-////        boolean uncommitted = PsiDocumentManager.getInstance(project).isUncommited(document);
-////        if (uncommitted) {
-////            Debug.out("uncommitted!");
-////            return null;
-////        }
-//
-//        //PsiDocumentManager.getInstance(project).commitAllDocuments();
-//        int offset = editor.getCaretModel().getOffset();
-//        if (offset < 1) {
-//            return null;
-//        }
-////        //Chars
-//        CharSequence charSequence = editor.getDocument().getCharsSequence();
-//        Debug.out("["+charSequence.charAt(offset - 1)+"]");
-////        Debug.out("["+charSequence.charAt(offset)+"] *");
-////        Debug.out("["+charSequence.charAt(offset + 1)+"]");
-//
-//        /* necessary to ensure the Psi model is in sync with the editor: */
-//        final Document document = editor.getDocument();
-//        PsiDocumentManager.getInstance(project).commitDocument(document);
-//
-//        PsiElement elem = file.findElementAt(offset - 1);
-//        if (elem == null) {
-//            return null;
-//        }
-//        String text = elem.getText();
-//        return text;
-//    }
 
 }

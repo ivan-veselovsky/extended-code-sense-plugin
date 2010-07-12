@@ -6,10 +6,14 @@
 
   <description>Provides some platform code-sense functionality enhancements.</description>
 
-  <version>1.0</version>
+  <version>1.1</version>
 
   <change-notes>
         <![CDATA[
+        <p><b>Version 1.1 changes</b></p>
+        <ul>
+           <li> fixed arg-live-templates invocation in in-word mode.</li>
+        </ul>
         <p><b>Version 1.0 changes</b></p>
         <ul>
            <li> fixed invocation of live templates with arguments.</li>

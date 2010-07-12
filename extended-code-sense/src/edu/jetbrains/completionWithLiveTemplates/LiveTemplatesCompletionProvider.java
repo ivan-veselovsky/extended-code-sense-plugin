@@ -8,7 +8,6 @@ import com.intellij.codeInsight.template.CustomTemplateCallback;
 import com.intellij.codeInsight.template.impl.TemplateImpl;
 import com.intellij.codeInsight.template.impl.TemplateManagerImpl;
 import com.intellij.codeInsight.template.impl.TemplateSettings;
-import com.intellij.openapi.command.CommandProcessor;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.fileEditor.FileDocumentManager;
@@ -129,8 +128,8 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
                 final Document document = editor2.getDocument();
                 final CharSequence text = document.getCharsSequence();
                 
-                Debug.out("Caret: ");
-                printContext(text, caretOffset, 10);
+                //Debug.out("Caret: ");
+                //printContext(text, caretOffset, 10);
 
                 if (!FileDocumentManager.getInstance().requestWriting(editor2.getDocument(), project)) {
                   return;
@@ -138,8 +137,8 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
                 TemplateManagerImpl templateManager = (TemplateManagerImpl)TemplateManagerImpl.getInstance(project);
                 int templateStart = getTemplateStart(templateImpl, argument, caretOffset, text);
 
-                Debug.out("template start: ");
-                printContext(text, templateStart, 10);
+                //Debug.out("template start: ");
+                //printContext(text, templateStart, 10);
 
                 templateManager.startTemplateWithPrefix(editor2, templateImpl, templateStart, null, argument);
             }
@@ -237,16 +236,16 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
       commitDocument(file, document);  
 
       if (!candidatesWithoutArgument.isEmpty()) {
-        Debug.out("filtering Non-arg candidates, templateStart: ");
+        //Debug.out("filtering Non-arg candidates, templateStart: ");
         int templateStart = caretOffset - nonArgKey.length();
-        printContext(text, templateStart, 7);
+        //printContext(text, templateStart, 7);
         candidatesWithoutArgument = filterApplicableCandidates(file, templateStart, candidatesWithoutArgument);
       }
 
       if (!candidatesWithArgument.isEmpty()) {
-          Debug.out("filtering Arg candidates, templateStart: ");
+          //Debug.out("filtering Arg candidates, templateStart: ");
           int templateStart = argumentOffset - argKey.length();
-          printContext(text, templateStart, 7);
+          //printContext(text, templateStart, 7);
         candidatesWithArgument = filterApplicableCandidates(file, templateStart, candidatesWithArgument);
       }
 
@@ -326,7 +325,10 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
       String key;
       List<TemplateImpl> candidates = Collections.emptyList();
       final boolean isShowingOnEmptySpace = BeanManager.storedBean().isShowLiveTemplatesOnEmptySpace();
-      boolean isAfterNothing = (caretOffset <= 0) || AutoPopupTypedHandlerDelegate.isBlank(text.charAt(caretOffset - 1));
+      boolean isAfterNothing =
+              /* NB: this mean that we search from the caret position but not from the argument position: */
+              !hasArgument
+              && ((caretOffset <= 0) || AutoPopupTypedHandlerDelegate.isBlank(text.charAt(caretOffset - 1)));
       final int minKeyLength = (isShowingOnEmptySpace && isAfterNothing) ? 0 : 1;
       for (int keyLength = settings.getMaxKeyLength(); keyLength >= minKeyLength; keyLength--) {
         int wordStart = caretOffset - keyLength;
