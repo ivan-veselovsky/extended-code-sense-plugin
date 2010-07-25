@@ -140,6 +140,7 @@ public class OptionsUIJPanel extends JPanel {
         showLiveTemplatesOnEmptySpaceCB = new JCheckBox();
         showLiveTemplatesOnEmptySpaceCB.setActionCommand("");
         showLiveTemplatesOnEmptySpaceCB.setMargin(new Insets(5, 5, 5, 5));
+        showLiveTemplatesOnEmptySpaceCB.setSelected(false);
         showLiveTemplatesOnEmptySpaceCB.setText("Show live templates in out-of-word completion");
         showLiveTemplatesOnEmptySpaceCB.putClientProperty("html.disable", Boolean.TRUE);
         lowerPanel.add(showLiveTemplatesOnEmptySpaceCB, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
@@ -166,7 +167,7 @@ public class OptionsUIJPanel extends JPanel {
         autoActivationDelayTF = new JTextField();
         autoActivationDelayTF.setInheritsPopupMenu(false);
         autoActivationDelayTF.setMargin(new Insets(5, 5, 5, 5));
-        autoActivationDelayTF.setText("200");
+        autoActivationDelayTF.setText("700");
         upperPanel.add(autoActivationDelayTF, new GridConstraints(4, 2, 1, 2, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
         activateOutOfWordCharactersTextField = new JTextField();
         activateOutOfWordCharactersTextField.setFont(new Font("Monospaced", Font.BOLD, 14));

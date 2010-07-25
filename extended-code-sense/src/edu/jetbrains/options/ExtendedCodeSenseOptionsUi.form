@@ -33,6 +33,7 @@
             <properties>
               <actionCommand value=""/>
               <margin top="5" left="5" bottom="5" right="5"/>
+              <selected value="false"/>
               <text value="Show live templates in out-of-word completion"/>
             </properties>
             <clientProperties>
@@ -97,7 +98,7 @@
             <properties>
               <inheritsPopupMenu value="false"/>
               <margin top="5" left="5" bottom="5" right="5"/>
-              <text value="200"/>
+              <text value="700"/>
             </properties>
           </component>
           <component id="59743" class="javax.swing.JTextField" binding="activateOutOfWordCharactersTextField">

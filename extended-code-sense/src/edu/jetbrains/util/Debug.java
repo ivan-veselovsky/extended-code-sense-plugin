@@ -6,7 +6,7 @@ public class Debug {
 
     private static final Logger LOG = Logger.getInstance("#"+Debug.class.getName());
 
-    private static final boolean logEnabled = true;
+    private static final boolean logEnabled = false;
 
     public static void out(Object x) {
         if (logEnabled) {

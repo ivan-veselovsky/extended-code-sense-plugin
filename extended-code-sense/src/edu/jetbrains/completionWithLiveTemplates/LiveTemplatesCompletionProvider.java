@@ -134,6 +134,10 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
         }
     }
 
+    /* NB: this operation is suitable for so called Zen-Coding,
+     * a special kind of live template completion in xml documents, like
+     * "abc|" -> "<abc></abc>".
+     */
     protected void handleCustomTemplates(PsiFile psiFile, int offset, Editor editor,
                             Map<TemplateImpl, String> template2argument, final Project project,
                             CompletionResultSet result) {
@@ -281,7 +285,7 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
         }
       }
       Debug.out("argument = ["+argument+"]");
-      Debug.out("char at argument offset = ["+text.charAt(argumentOffset)+"]");
+      //Debug.out("char at argument offset = ["+text.charAt(argumentOffset)+"]");
       keyContainer[0] = null;
       List<TemplateImpl> candidatesWithArgument = findMatchingTemplates(text, argumentOffset, templateSettings, true, keyContainer);
       final String argKey = keyContainer[0];
