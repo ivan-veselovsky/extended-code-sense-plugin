@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 
-public class PluginOptionsConfigurable implements Configurable, ApplicationComponent /*, Place.Navigator */ {
+public class PluginOptionsConfigurable implements Configurable, ApplicationComponent {
 
     private OptionsUIJPanel optionsUIJPanel;
 

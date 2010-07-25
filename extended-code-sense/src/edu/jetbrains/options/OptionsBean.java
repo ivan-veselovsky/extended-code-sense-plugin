@@ -1,8 +1,6 @@
 package edu.jetbrains.options;
 
-import java.io.Serializable;
-
-public class OptionsBean implements Serializable {
+public class OptionsBean {
 
     private boolean showLiveTemplates;
     private boolean showLiveTemplatesOnEmptySpace;
