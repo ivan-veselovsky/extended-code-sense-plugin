@@ -4,7 +4,6 @@ import com.intellij.codeInsight.AutoPopupController;
 import com.intellij.codeInsight.completion.DotAutoLookupHandler;
 import com.intellij.codeInsight.editorActions.TypedHandlerDelegate;
 import com.intellij.openapi.editor.Editor;
-import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.openapi.project.Project;
 import com.intellij.psi.*;
 import edu.jetbrains.options.BeanManager;

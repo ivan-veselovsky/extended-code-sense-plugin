@@ -5,6 +5,7 @@ import com.intellij.codeInsight.lookup.LookupElement;
 import com.intellij.codeInsight.lookup.LookupElementBuilder;
 import com.intellij.codeInsight.template.CustomLiveTemplate;
 import com.intellij.codeInsight.template.CustomTemplateCallback;
+import com.intellij.codeInsight.template.Template;
 import com.intellij.codeInsight.template.impl.TemplateImpl;
 import com.intellij.codeInsight.template.impl.TemplateManagerImpl;
 import com.intellij.codeInsight.template.impl.TemplateSettings;
@@ -22,9 +23,39 @@ import edu.jetbrains.options.BeanManager;
 import edu.jetbrains.util.Debug;
 import org.jetbrains.annotations.NotNull;
 
+import java.lang.reflect.Method;
 import java.util.*;
 
 public class LiveTemplatesCompletionProvider extends CompletionProvider<CompletionParameters> {
+
+
+    private static final String IS_APPLICABLE_NAME = "isApplicable";
+    private static final Class[] IS_APPLICABLE_SIG_1 = new Class[] { PsiFile.class, int.class };
+    private static final Class[] IS_APPLICABLE_SIG_2 = new Class[] { PsiFile.class, int.class, boolean.class };
+
+    private static Method m = null;
+    private static Class[] sig = null;
+
+    static {
+        try {
+            sig = IS_APPLICABLE_SIG_1;
+            m = CustomLiveTemplate.class.getMethod(IS_APPLICABLE_NAME, sig );
+            Debug.out("sig1 ok.");
+        } catch (Exception e) {
+        }
+        if (m == null) {
+            try {
+                sig = IS_APPLICABLE_SIG_2;
+                m = CustomLiveTemplate.class.getMethod(IS_APPLICABLE_NAME, sig );
+                Debug.out("sig2 ok.");
+            } catch (Exception e) {
+            }
+        }
+        if (m == null) {
+            // failed to get the method:
+            Debug.out("warn: method not found!");
+        }
+    }
 
     LiveTemplatesCompletionProvider() {
         super();
@@ -78,11 +109,38 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
         }
     }
 
+    /*
+    The following commit changed the signature of the method com.intellij.codeInsight.template.CustomLiveTemplate.isApplicable():
+
+    commit 4a792404273affca368c32a35c1ede1f62170ddd
+    Author: Eugene Kudelevsky <Eugene.Kudelevsky@jetbrains.com>
+    Date:   Thu Apr 22 20:49:09 2010 +0400
+    refactoring, support css zen-coding selectors
+     */
+    private static boolean isApplicable(CustomLiveTemplate customLiveTemplate, PsiFile psiFile, int offset) {
+        if (m == null) {
+            return false;
+        }
+        try {
+            Boolean result = null;
+            if (sig == IS_APPLICABLE_SIG_1) {
+                result = (Boolean)m.invoke(customLiveTemplate, new Object[] { psiFile, new Integer(offset) } );
+            } else {
+                result = (Boolean)m.invoke(customLiveTemplate, new Object[] { psiFile, new Integer(offset), Boolean.FALSE } );
+            }
+            return result;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     protected void handleCustomTemplates(PsiFile psiFile, int offset, Editor editor,
                             Map<TemplateImpl, String> template2argument, final Project project,
                             CompletionResultSet result) {
         for (final CustomLiveTemplate customLiveTemplate : CustomLiveTemplate.EP_NAME.getExtensions()) {
-            if (customLiveTemplate.isApplicable(psiFile, offset)) {
+            if ( //customLiveTemplate.isApplicable(psiFile, offset)
+                    isApplicable(customLiveTemplate, psiFile, offset)
+                    ) {
               final CustomTemplateCallback callback = new CustomTemplateCallback(editor, psiFile);
               final String key = customLiveTemplate.computeTemplateKey(callback);
               if (key != null) {
@@ -114,7 +172,7 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
     }
 
     private static void addLiveTemplateToCompletionList(final Project project,
-                                                        final TemplateImpl templateImpl,
+                                                        final Template templateImpl,
                                                         final String argument,
                                                         CompletionResultSet result) {
         String key = templateImpl.getKey();
@@ -140,7 +198,7 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
                 //Debug.out("template start: ");
                 //printContext(text, templateStart, 10);
 
-                templateManager.startTemplateWithPrefix(editor2, templateImpl, templateStart, null, argument);
+                templateManager.startTemplateWithPrefix(editor2, (TemplateImpl)templateImpl, templateStart, null, argument);
             }
         });
         // TODO: add icon for live templates. 
@@ -182,7 +240,7 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
         return argumentOffset;
     }
 
-    static int getTemplateStart(TemplateImpl template, String argument, final int caretOffset, CharSequence text) {
+    static int getTemplateStart(Template template, String argument, final int caretOffset, CharSequence text) {
       final int templateEnd;
       if (argument == null) {
         templateEnd = caretOffset;
