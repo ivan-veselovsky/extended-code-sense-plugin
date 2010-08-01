@@ -318,7 +318,7 @@ public class LiveTemplatesCompletionProvider extends CompletionProvider<Completi
     }
 
     /**
-     * NB: diagnistic only
+     * NB: diagnostic only
      * @param seq
      * @param offset
      */

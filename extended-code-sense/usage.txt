@@ -10,17 +10,3 @@ Features
 * Suggested code completion pops up automatically after some timeout wherever an identifier is expected in your code.
 * The code completion window shows matching "Live Templates" among other completion possibilities.
 
-Installation
-* Download the binary (extended-code-sense.jar)
-* Locate the folder where your PhpStorm holds the user's plugins: see file <PhpStorm Home>/bin/idea.properties and find there property 
-"idea.plugins.path" (e.g. in my machine idea.plugins.path=${user.home}/.WebIde10/config/plugins). 
-* Copy the downloaded plugin .jar archive exactly into that folder (not into a subfolder).
-* Restart your PhpStorm it is running.
-* If the installation is successful, you should see the "Extended Code Sense" plugin in the list of installed plugins, and the plugin should be activated.
-
-Building From Source
-* Clone the GIT repository http://github.com/ivan-veselovsky/repka/tree/master/extended-code-sense/ .
-* Open the checked out project in IDEA and build it using the menu command.
-* Create the deployable archive using "Prepare Plugin Module for Deployment" menu.
-
-
