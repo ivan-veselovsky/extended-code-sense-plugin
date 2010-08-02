@@ -27,7 +27,7 @@ import java.io.InputStream;
 public class LiveTemplatesCompletionTest extends LightCompletionTestCase {
 
   protected static enum Lang {
-    java, js, php, plain, xml;
+    java, js, php, groovy, plain, xml;
   }
 
   private static final String TEST_DATA_PATH_KEY = "test.data.path";
@@ -111,6 +111,16 @@ public class LiveTemplatesCompletionTest extends LightCompletionTestCase {
     public void testZenXmlInComment() throws Exception {
           configureByFile(getBasePath(Lang.xml) + "zen_in_comment.xhtml");
           checkResultByFile(getBasePath(Lang.xml) + "zen_in_comment_after.xhtml");
+    }
+
+    public void testGroovyPsvm() throws Exception {
+        configureByFile(getBasePath(Lang.groovy) + "psvm.groovy");
+        checkResultByFile(getBasePath(Lang.groovy) + "psvm_after.groovy");
+    }
+
+    public void testGroovyArg() throws Exception {
+        configureByFile(getBasePath(Lang.groovy) + "arg.groovy");
+        checkResultByFile(getBasePath(Lang.groovy) + "arg_after.groovy");
     }
 
 }

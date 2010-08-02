@@ -23,6 +23,10 @@
     <orderEntry type="module" module-name="idea-ui" />
     <orderEntry type="module" module-name="java-impl" />
     <orderEntry type="module" module-name="extended-code-sense-java-module-view" />
+    <orderEntry type="module" module-name="jetgroovy" />
+    <orderEntry type="module" module-name="IntelliLang-xml" />
+    <orderEntry type="module" module-name="IntelliLang-java" />
+    <orderEntry type="module" module-name="IntelliLangJava" />
   </component>
 </module>
 

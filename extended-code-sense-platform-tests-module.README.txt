@@ -1,0 +1,16 @@
+* open the "community" platform as the idea project
+
+* add module "extended-code-sense-platform-tests-module"
+
+* add module "extended-code-sense-java-module-view" (this is just a non-plugin view of "extended-code-sense" plugin module -- needed only to overcome classloaders problems).
+
+* create a run configuration for JUnit test edu.jetbrains.codesense.LiveTemplatesCompletionTest from the "extended-code-sense-platform-tests-module" module.
+
+* in this run configuration specify the following 2 VM args:  
+-Didea.plugins.path=<full path to folder where "extended-code-sense" plugin is found, e.g. debug sandbox folder like C:\Users\foo\.IdeaIC10\system\plugins-sandbox\plugins>
+ - this propeerty is needed to load the "extended-code-sense" plugin into the testing platform.
+
+-Dtest.data.path=<full path to "extended-code-sense-platform-tests-module" folder, e.g. G:\home\foo\git\repka\extended-code-sense-platform-tests-module>
+ - this property is needed to make the test resources available for the test.
+
+* run the test edu.jetbrains.codesense.LiveTemplatesCompletionTest.
